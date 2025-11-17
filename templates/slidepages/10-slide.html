@@ -1,0 +1,301 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Risklar va Qarshi Choralar{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-danger">Risklar va Qarshi Choralar</h1>
+                <p class="lead text-muted">Moliya Markazlarining Zaiflik Nuqtalari</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Asosiy risk kategoriyalari -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-header bg-danger text-white">
+                            <h5 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>1. Makroiqtisodiy Risklar</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="risk-item mb-3">
+                                <h6 class="text-danger">📉 Global Moliyaviy Inqirozlar</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> 2008 inqirozi Wall Street'ni vayron qildi, $8 trln yo'qotish</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Stress testing (CCAR, EBA)</li>
+                                        <li>Higher capital requirements (Basel III)</li>
+                                        <li>Macroprudential supervision</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="risk-item mb-3">
+                                <h6 class="text-danger">💱 Valyuta O'zgaruvchanligi</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> Keskin kurs o'zgarishi kapital oqimini buzadi</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Forex reserves (minimum 3 oylik import)</li>
+                                        <li>Managed float yoki currency board</li>
+                                        <li>Swap lines bilan CBlar</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="risk-item">
+                                <h6 class="text-danger">📊 Bozor Likvidlik Inqirozi</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> "Flash crash" hodisalari, market freeze</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Circuit breakers (trading halts)</li>
+                                        <li>Market making obligations</li>
+                                        <li>Central bank lender of last resort</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <h5 class="mb-0"><i class="fas fa-user-secret me-2"></i>2. Operatsion va Kiberrisklar</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="risk-item mb-3">
+                                <h6 class="text-warning">🔐 Kiberхujumlar</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> 2020-da $1+ mlrd yo'qotish (ransomware, data breach)</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Multi-factor authentication (MFA)</li>
+                                        <li>End-to-end encryption</li>
+                                        <li>Penetration testing va bug bounty</li>
+                                        <li>Cyber insurance</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="risk-item mb-3">
+                                <h6 class="text-warning">⚠️ Texnologik Nosozliklar</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> TSE (Tokyo Stock Exchange) 2020 - butun kun to'xtadi</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Redundant systems (backup)</li>
+                                        <li>Disaster recovery plans</li>
+                                        <li>Regular system audits</li>
+                                        <li>Cloud-based infrastructure</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="risk-item">
+                                <h6 class="text-warning">🕵️ Ichki Firibgarlik</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> Rogue traders - Société Générale ($7.2 mlrd, 2008)</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Trading limits va position monitoring</li>
+                                        <li>Segregation of duties</li>
+                                        <li>Compliance surveillance systems</li>
+                                        <li>Whistleblower protection</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-header bg-info text-white">
+                            <h5 class="mb-0"><i class="fas fa-globe me-2"></i>3. Geosiyosiy Risklar</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="risk-item mb-3">
+                                <h6 class="text-info">🗺️ Siyosiy Beqarorlik</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> Hong Kong 2019-2020 - protest'lar, kapital oqimi</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Diversifikatsiya (bir mintaqaga bog'liq bo'lmaslik)</li>
+                                        <li>Political risk insurance</li>
+                                        <li>Mustahkam institutlar va democracy</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="risk-item mb-3">
+                                <h6 class="text-info">🚫 Sanctions va Trade Wars</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> US-China trade war, Russia sanctions</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Sanctions screening software</li>
+                                        <li>Legal compliance teams</li>
+                                        <li>Neutral positioning (Switzerland model)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="risk-item">
+                                <h6 class="text-info">🌍 Regional Conflict</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> O'rta Sharq ziddiyatlari Dubai uchun risk</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Neutral diplomatic stance</li>
+                                        <li>Evacuation plans</li>
+                                        <li>Business continuity offshore</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-lg h-100">
+                        <div class="card-header bg-secondary text-white">
+                            <h5 class="mb-0"><i class="fas fa-shield-alt me-2"></i>4. Regulyatsiya va Komplians Risklari</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="risk-item mb-3">
+                                <h6 class="text-secondary">💸 Pul Yuvish (AML)</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> Danske Bank skandali - $230 mlrd pul yuvilgan</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>KYC/CDD protocols (know your customer)</li>
+                                        <li>Transaction monitoring systems</li>
+                                        <li>Suspicious activity reporting (SAR)</li>
+                                        <li>FATF recommendations compliance</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="risk-item mb-3">
+                                <h6 class="text-secondary">🎯 Sanksiya Buzilishi</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> BNP Paribas - $8.9 mlrd jarima (2014)</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>OFAC/UN sanctions screening</li>
+                                        <li>Enhanced due diligence (EDD)</li>
+                                        <li>Third-party risk management</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="risk-item">
+                                <h6 class="text-secondary">📋 Regulyatsiya O'zgarishlari</h6>
+                                <p class="small mb-2"><strong>Ta'sir:</strong> Brexit - London uchun yangi qoidalar</p>
+                                <div class="mitigation">
+                                    <strong class="text-success">Qarshi chora:</strong>
+                                    <ul class="small mb-0">
+                                        <li>Regulatory intelligence teams</li>
+                                        <li>Flexible business models</li>
+                                        <li>Multiple jurisdiction presence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Risk Management Framework -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="alert alert-success border-0 shadow-sm">
+                        <h5 class="alert-heading">
+                            <i class="fas fa-check-circle me-2"></i>Enterprise Risk Management (ERM) Framework
+                        </h5>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h6>1. Identify</h6>
+                                <p class="small mb-0">Risk assessment va mapping</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>2. Measure</h6>
+                                <p class="small mb-0">VaR, stress testing, scenario analysis</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>3. Mitigate</h6>
+                                <p class="small mb-0">Hedging, insurance, diversification</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h6>4. Monitor</h6>
+                                <p class="small mb-0">Real-time dashboards, KRI tracking</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=9 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=11 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.risk-item {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.risk-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.risk-item h6 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.mitigation {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+.mitigation ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.mitigation ul li {
+    margin-bottom: 3px;
+}
+</style>
+{% endblock %}

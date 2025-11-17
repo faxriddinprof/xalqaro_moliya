@@ -1,0 +1,352 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Global Statistika Dashboard{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container-fluid">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-primary">Global Moliya Markazlari Statistikasi</h1>
+                <p class="lead text-muted">GFCI Rankings va Asosiy Ko'rsatkichlar (2023-2024)</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- GFCI Top 15 -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-gradient-primary text-white p-3">
+                            <h4 class="mb-0">
+                                <i class="fas fa-trophy me-2"></i>Global Financial Centres Index (GFCI) - Top 15
+                            </h4>
+                            <p class="small mb-0 mt-2">GFCI 35 (Mart 2024) - Z/Yen Group va CDI</p>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>Rank</th>
+                                                    <th>Shahar</th>
+                                                    <th>Mamlakat</th>
+                                                    <th class="text-center">Rating</th>
+                                                    <th class="text-center">O'zgarish</th>
+                                                    <th>Kuchli Tomoni</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="table-warning">
+                                                    <td><span class="badge bg-warning text-dark fs-6">🥇 1</span></td>
+                                                    <td><strong>New York</strong></td>
+                                                    <td>🇺🇸 AQSH</td>
+                                                    <td class="text-center"><span class="badge bg-success">759</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-up text-success"></i> +3</td>
+                                                    <td><small>Capital markets, Banking</small></td>
+                                                </tr>
+                                                <tr class="table-light">
+                                                    <td><span class="badge bg-secondary fs-6">🥈 2</span></td>
+                                                    <td><strong>London</strong></td>
+                                                    <td>🇬🇧 UK</td>
+                                                    <td class="text-center"><span class="badge bg-success">756</span></td>
+                                                    <td class="text-center"><i class="fas fa-minus text-muted"></i> 0</td>
+                                                    <td><small>Forex, Asset management</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="badge bg-warning text-dark fs-6">🥉 3</span></td>
+                                                    <td><strong>Singapore</strong></td>
+                                                    <td>🇸🇬 Singapur</td>
+                                                    <td class="text-center"><span class="badge bg-success">741</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-up text-success"></i> +2</td>
+                                                    <td><small>Wealth mgmt, Fintech</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="badge bg-info">4</span></td>
+                                                    <td><strong>Hong Kong</strong></td>
+                                                    <td>🇭🇰 Xitoy SAR</td>
+                                                    <td class="text-center"><span class="badge bg-primary">738</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-down text-danger"></i> -1</td>
+                                                    <td><small>IPO, Gateway to China</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="badge bg-info">5</span></td>
+                                                    <td><strong>San Francisco</strong></td>
+                                                    <td>🇺🇸 AQSH</td>
+                                                    <td class="text-center"><span class="badge bg-primary">729</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-up text-success"></i> +1</td>
+                                                    <td><small>Tech finance, VC</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>Shanghai</td>
+                                                    <td>🇨🇳 Xitoy</td>
+                                                    <td class="text-center"><span class="badge bg-primary">724</span></td>
+                                                    <td class="text-center"><i class="fas fa-minus text-muted"></i> 0</td>
+                                                    <td><small>Commodity futures</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td>Los Angeles</td>
+                                                    <td>🇺🇸 AQSH</td>
+                                                    <td class="text-center"><span class="badge bg-primary">716</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-up text-success"></i> +2</td>
+                                                    <td><small>Entertainment finance</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td>Tokyo</td>
+                                                    <td>🇯🇵 Yaponiya</td>
+                                                    <td class="text-center"><span class="badge bg-primary">711</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-down text-danger"></i> -2</td>
+                                                    <td><small>Insurance, Pension</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>9</td>
+                                                    <td>Dubai</td>
+                                                    <td>🇦🇪 BAA</td>
+                                                    <td class="text-center"><span class="badge bg-primary">714</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-up text-success"></i> +4</td>
+                                                    <td><small>Islamic finance, Hub</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>10</td>
+                                                    <td>Shenzhen</td>
+                                                    <td>🇨🇳 Xitoy</td>
+                                                    <td class="text-center"><span class="badge bg-primary">707</span></td>
+                                                    <td class="text-center"><i class="fas fa-minus text-muted"></i> 0</td>
+                                                    <td><small>Tech IPO</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>11</td>
+                                                    <td>Chicago</td>
+                                                    <td>🇺🇸 AQSH</td>
+                                                    <td class="text-center"><span class="badge bg-info">703</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-down text-danger"></i> -1</td>
+                                                    <td><small>Derivatives (CME)</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>12</td>
+                                                    <td>Zurich</td>
+                                                    <td>🇨🇭 Shveytsariya</td>
+                                                    <td class="text-center"><span class="badge bg-info">701</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-up text-success"></i> +1</td>
+                                                    <td><small>Private banking</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>13</td>
+                                                    <td>Seoul</td>
+                                                    <td>🇰🇷 Janubiy Koreya</td>
+                                                    <td class="text-center"><span class="badge bg-info">698</span></td>
+                                                    <td class="text-center"><i class="fas fa-minus text-muted"></i> 0</td>
+                                                    <td><small>Equity markets</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>14</td>
+                                                    <td>Geneva</td>
+                                                    <td>🇨🇭 Shveytsariya</td>
+                                                    <td class="text-center"><span class="badge bg-info">696</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-up text-success"></i> +2</td>
+                                                    <td><small>Commodities trading</small></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>15</td>
+                                                    <td>Boston</td>
+                                                    <td>🇺🇸 AQSH</td>
+                                                    <td class="text-center"><span class="badge bg-info">694</span></td>
+                                                    <td class="text-center"><i class="fas fa-arrow-down text-danger"></i> -1</td>
+                                                    <td><small>Asset management</small></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="stat-box bg-light p-3 rounded mb-3">
+                                        <h6 class="text-primary">📊 GFCI Metodologiya</h6>
+                                        <ul class="small mb-0">
+                                            <li><strong>122 ta instrumental ko'rsatkich</strong></li>
+                                            <li><strong>5 ta asosiy soha:</strong>
+                                                <ul>
+                                                    <li>Business Environment (26%)</li>
+                                                    <li>Human Capital (24%)</li>
+                                                    <li>Infrastructure (21%)</li>
+                                                    <li>Financial Sector Development (17%)</li>
+                                                    <li>Reputation (12%)</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Survey:</strong> 10,000+ moliya mutaxassisi</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="stat-box bg-warning bg-opacity-10 p-3 rounded mb-3">
+                                        <h6 class="text-warning">⚡ Tezkor O'sish (2023-2024)</h6>
+                                        <ul class="small mb-0">
+                                            <li>🥇 Dubai: +4 o'rin (eng tez)</li>
+                                            <li>🥈 Riyadh: +7 o'rin (yangi kirib keluvchi)</li>
+                                            <li>🥉 Abu Dhabi: +5 o'rin</li>
+                                            <li>Mumbai: +3 o'rin</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="stat-box bg-danger bg-opacity-10 p-3 rounded">
+                                        <h6 class="text-danger">📉 Pasayish Yo'nalishi</h6>
+                                        <ul class="small mb-0">
+                                            <li>Frankfurt: -3 o'rin (Brexit ta'siri tugadi)</li>
+                                            <li>Paris: -2 o'rin</li>
+                                            <li>Tokyo: -2 o'rin (yosharish muammolari)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Global Statistics -->
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="stats-card bg-gradient-blue">
+                        <div class="stats-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="stats-value">$115+ Trln</h3>
+                        <p class="stats-label">Global Stock Market Cap</p>
+                        <small class="stats-detail">NYSE + NASDAQ + LSE + others (2024)</small>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stats-card bg-gradient-green">
+                        <div class="stats-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3 class="stats-value">$7.5 Trln</h3>
+                        <p class="stats-label">Daily FX Turnover</p>
+                        <small class="stats-detail">BIS Survey 2022 - London 38%</small>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stats-card bg-gradient-orange">
+                        <div class="stats-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="stats-value">28,000+</h3>
+                        <p class="stats-label">Moliyaviy Institutlar</p>
+                        <small class="stats-detail">Top 10 markazlarda jami</small>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stats-card bg-gradient-purple">
+                        <div class="stats-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="stats-value">8.5M+</h3>
+                        <p class="stats-label">Moliya Sohasida Bandlik</p>
+                        <small class="stats-detail">Top 15 shaharlar (2023)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=10 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=12 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stats-card {
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.stats-card:hover {
+    transform: translateY(-10px);
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-green {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+}
+
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+}
+
+.stats-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.stats-value {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.stats-label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.stats-detail {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+.stat-box {
+    border-left: 4px solid;
+}
+
+.stat-box h6 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+}
+</style>
+{% endblock %}

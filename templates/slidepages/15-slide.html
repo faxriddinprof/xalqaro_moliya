@@ -1,0 +1,384 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Xulosa{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container-fluid">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-4 mb-3 fw-bold text-gradient">Xulosa va Kelajak Istiqbollari</h1>
+                <p class="lead text-muted">Jahon Moliya Markazlari Rivojlanish Bosqichlari - Yakuniy Tahlil</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Key Takeaways -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-gradient-primary text-white p-4">
+                            <h4 class="mb-0">
+                                <i class="fas fa-key me-2"></i>Asosiy Xulosalar (Key Takeaways)
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="takeaway-box p-3 border-start border-primary border-5">
+                                        <h5 class="text-primary">1️⃣ 5 Bosqichli Rivojlanish Modeli</h5>
+                                        <p class="mb-2">Moliya markazlari <strong>Emerging → Growth → Regional → Global → Transformative</strong> bosqichlaridan o'tadi.</p>
+                                        <ul class="small mb-0">
+                                            <li>Har bir bosqichda o'ziga xos KPI'lar va strategiyalar</li>
+                                            <li>Dubai 20 yilda Emerging'dan Global'ga yetdi (eng tez)</li>
+                                            <li>Singapore 30 yil, London 300+ yil tarix</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="takeaway-box p-3 border-start border-success border-5">
+                                        <h5 class="text-success">2️⃣ 6 Ta Asosiy Omil (Success Factors)</h5>
+                                        <p class="mb-2">Barcha muvaffaqiyatli markazlarda umumiy xususiyatlar:</p>
+                                        <ul class="small mb-0">
+                                            <li><strong>Political stability</strong> va rule of law</li>
+                                            <li><strong>Strategic location</strong> (time zone, geography)</li>
+                                            <li><strong>Pro-business regulations</strong> va low taxation</li>
+                                            <li><strong>Human capital</strong> (skilled workforce)</li>
+                                            <li><strong>Infrastructure</strong> (digital + physical)</li>
+                                            <li><strong>Currency stability</strong> va convertibility</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="takeaway-box p-3 border-start border-warning border-5">
+                                        <h5 class="text-warning">3️⃣ Regional Specialization</h5>
+                                        <p class="mb-2">Har bir markaz o'z niche'ini topdi:</p>
+                                        <ul class="small mb-0">
+                                            <li><strong>New York:</strong> Capital markets, IPO, M&A</li>
+                                            <li><strong>London:</strong> Forex, wealth management, European gateway</li>
+                                            <li><strong>Singapore:</strong> Asian hub, fintech, wealth management</li>
+                                            <li><strong>Dubai:</strong> Islamic finance, Middle East bridge, 0% tax</li>
+                                            <li><strong>Hong Kong:</strong> China gateway, IPO, commodities</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="takeaway-box p-3 border-start border-danger border-5">
+                                        <h5 class="text-danger">4️⃣ Risklar va Challenges</h5>
+                                        <p class="mb-2">Moliya markazlari doimiy risklar bilan yuzma-yuz:</p>
+                                        <ul class="small mb-0">
+                                            <li><strong>Makroiqtisodiy:</strong> Global inqirozlar, valyuta o'zgaruvchanligi</li>
+                                            <li><strong>Operatsion:</strong> Kiberхujumlar, tech failures</li>
+                                            <li><strong>Geosiyosiy:</strong> Sanctions, political instability</li>
+                                            <li><strong>Regulyatsiya:</strong> AML/KYC, compliance costs</li>
+                                            <li>2008 inqirozi - Wall Street $8 Trln yo'qotdi</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="takeaway-box p-3 border-start border-info border-5">
+                                        <h5 class="text-info">5️⃣ Iqtisodiy Ta'sir</h5>
+                                        <p class="mb-2">Moliya markazlari milliy iqtisodiyotga katta hissa qo'shadi:</p>
+                                        <ul class="small mb-0">
+                                            <li>GDP hissasi: 9-20% (New York 9%, Hong Kong 20%)</li>
+                                            <li>Bandlik: 8.5M+ xodim (Top 15 markazlar)</li>
+                                            <li>Soliq tushumlari: $18 Mlrd+ (NYC), £75 Mlrd (UK)</li>
+                                            <li>FDI jalb etish: $100-300 Mlrd/yil</li>
+                                            <li>Multiplikator ta'siri: 1 moliya ish o'rni = 3-5 boshqa sohalarda</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="takeaway-box p-3 border-start border-secondary border-5">
+                                        <h5 class="text-secondary">6️⃣ O'zbekiston Potensiali</h5>
+                                        <p class="mb-2">Toshkent Regional Moliya Markazi bo'lishi mumkin:</p>
+                                        <ul class="small mb-0">
+                                            <li><strong>Imkoniyat:</strong> Markaziy Osiyo hub (75M population)</li>
+                                            <li><strong>Niche:</strong> Islamic finance, commodity trading, remittance tech</li>
+                                            <li><strong>Timeline:</strong> 2025-2030 (5 yillik roadmap)</li>
+                                            <li><strong>Nishon:</strong> GFCI Top 50, GDP hissasi 5%+</li>
+                                            <li><strong>Key challenge:</strong> Institutional reform, human capital</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Future Trends (2024-2040) -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-dark text-white p-4">
+                            <h4 class="mb-0">
+                                <i class="fas fa-crystal-ball me-2"></i>Kelajak Istiqbollari (2024-2040)
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="future-card bg-gradient-blue text-white p-4 rounded h-100">
+                                        <div class="icon-circle mb-3">
+                                            <i class="fas fa-robot fa-3x"></i>
+                                        </div>
+                                        <h5>AI va Automation</h5>
+                                        <ul class="small">
+                                            <li>Algorithmic trading 90%+ bo'ladi</li>
+                                            <li>Robo-advisors democratize wealth mgmt</li>
+                                            <li>AI-powered risk assessment va fraud detection</li>
+                                            <li>Jobs: Traditional roles kamayadi, data scientist ko'payadi</li>
+                                        </ul>
+                                        <div class="mt-3 pt-3 border-top">
+                                            <strong>Impact:</strong> Efficiency oshadi, lekin unemployment risk
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="future-card bg-gradient-green text-white p-4 rounded h-100">
+                                        <div class="icon-circle mb-3">
+                                            <i class="fas fa-leaf fa-3x"></i>
+                                        </div>
+                                        <h5>Green Finance va ESG</h5>
+                                        <ul class="small">
+                                            <li>ESG bonds $10+ Trln market (2030)</li>
+                                            <li>Carbon trading exchanges (Singapore, London leaders)</li>
+                                            <li>Climate risk disclosure mandatory</li>
+                                            <li>Green taxonomy standartlari global harmonization</li>
+                                        </ul>
+                                        <div class="mt-3 pt-3 border-top">
+                                            <strong>Impact:</strong> London va Paris ESG hub bo'ladi
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="future-card bg-gradient-orange text-white p-4 rounded h-100">
+                                        <div class="icon-circle mb-3">
+                                            <i class="fab fa-bitcoin fa-3x"></i>
+                                        </div>
+                                        <h5>Digital Assets va CBDC</h5>
+                                        <ul class="small">
+                                            <li>Central Bank Digital Currencies (50+ mamlakat 2030)</li>
+                                            <li>Tokenized securities va real-world assets</li>
+                                            <li>Crypto regulation clarity (MiCA in EU, US framework)</li>
+                                            <li>DeFi va TradFi integratsiyasi</li>
+                                        </ul>
+                                        <div class="mt-3 pt-3 border-top">
+                                            <strong>Impact:</strong> Singapore, Dubai crypto hub leadership
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="future-card bg-gradient-purple text-white p-4 rounded h-100">
+                                        <div class="icon-circle mb-3">
+                                            <i class="fas fa-globe-asia fa-3x"></i>
+                                        </div>
+                                        <h5>Osiyo Century</h5>
+                                        <ul class="small">
+                                            <li>Asia GDP 50%+ global (2040)</li>
+                                            <li>China, India - top 2 ekonomika</li>
+                                            <li>RMB internationalization (10-15% reserves)</li>
+                                            <li>ASEAN moliya integratsiyasi tugallanadi</li>
+                                        </ul>
+                                        <div class="mt-3 pt-3 border-top">
+                                            <strong>Impact:</strong> Singapore, Shanghai, Mumbai yuksaladi
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="future-card bg-gradient-red text-white p-4 rounded h-100">
+                                        <div class="icon-circle mb-3">
+                                            <i class="fas fa-shield-alt fa-3x"></i>
+                                        </div>
+                                        <h5>Cybersecurity Priority</h5>
+                                        <ul class="small">
+                                            <li>Quantum computing threat (encryption break)</li>
+                                            <li>AI-powered cyberattacks sophisticated</li>
+                                            <li>Cyber insurance mandatory</li>
+                                            <li>International cyber norms (G20, UN)</li>
+                                        </ul>
+                                        <div class="mt-3 pt-3 border-top">
+                                            <strong>Impact:</strong> $1+ Trln cybersecurity market
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="future-card bg-gradient-yellow text-dark p-4 rounded h-100">
+                                        <div class="icon-circle mb-3">
+                                            <i class="fas fa-people-arrows fa-3x"></i>
+                                        </div>
+                                        <h5>De-globalization Risk</h5>
+                                        <ul class="small">
+                                            <li>US-China rivalry (decoupling)</li>
+                                            <li>Regional blocs kuchayadi (RCEP, EU, USMCA)</li>
+                                            <li>Financial fragmentation (separate payment systems)</li>
+                                            <li>Neutral hubs qimmatli (Singapore, Switzerland)</li>
+                                        </ul>
+                                        <div class="mt-3 pt-3 border-top">
+                                            <strong>Impact:</strong> Multi-polar moliya tizimi
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Final Message -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg bg-gradient-primary text-white">
+                        <div class="card-body p-5 text-center">
+                            <h3 class="mb-4">
+                                <i class="fas fa-quote-left me-2"></i>
+                                Yakuniy Fikr
+                                <i class="fas fa-quote-right ms-2"></i>
+                            </h3>
+                            <p class="lead mb-4" style="line-height: 1.8;">
+                                Moliya markazlari nafaqat shaharlar - bu <strong>ekosistemalar</strong>dir. 
+                                Ular <strong>qonunchilik, institutlar, kadrlar, infrastruktura, siyosat va madaniyat</strong>ning 
+                                murakkab kombinatsiyasidir. Bir kecha-kunduz yaratib bo'lmaydi - 
+                                <strong>uzoq muddatli vizyon, doimiy islohotlar va siyosiy iroda</strong> kerak.
+                            </p>
+                            <p class="lead mb-4" style="line-height: 1.8;">
+                                <strong>New York</strong> 150+ yil, <strong>London</strong> 300+ yil, 
+                                <strong>Dubai</strong> 20 yil sarfladi. <strong>O'zbekiston</strong> uchun 
+                                10-15 yillik haqiqiy reja va istiqomat bilan <strong>regional lider</strong> bo'lish mumkin.
+                            </p>
+                            <hr class="my-4 bg-white">
+                            <h5 class="mb-3">
+                                <i class="fas fa-graduation-cap me-2"></i>
+                                Prezentatsiyani tayyorlovchi
+                            </h5>
+                            <h4 class="mb-2">Fariddin Baxtiyorov</h4>
+                            <p class="mb-0">
+                                <strong>TDIU - Moliya va Moliyaviy Texnologiyalar</strong><br>
+                                <small>Xalqaro Moliya fanidan kurs ishi</small>
+                            </p>
+                            <div class="mt-4">
+                                <a href="{% url 'resume' %}" class="btn btn-light btn-lg">
+                                    <i class="fas fa-home me-2"></i>Bosh Sahifaga Qaytish
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=14 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'resume' %}" class="btn btn-success">
+            <i class="fas fa-check-circle me-2"></i>Yakunlash
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.takeaway-box {
+    background: white;
+    border-radius: 10px;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.takeaway-box:hover {
+    transform: translateX(5px);
+}
+
+.takeaway-box h5 {
+    margin-bottom: 15px;
+}
+
+.future-card {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.future-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.bg-gradient-green {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.bg-gradient-orange {
+    background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+}
+
+.bg-gradient-purple {
+    background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+}
+
+.bg-gradient-red {
+    background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+}
+
+.bg-gradient-yellow {
+    background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+}
+
+.future-card ul {
+    padding-left: 20px;
+}
+
+.future-card ul li {
+    margin-bottom: 8px;
+}
+</style>
+{% endblock %}

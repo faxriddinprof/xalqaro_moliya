@@ -1,0 +1,350 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Regional Taqqoslash{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container-fluid">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-primary">Regional Taqqoslash: 3 Ta Asosiy Mintaqa</h1>
+                <p class="lead text-muted">Osiyo vs Yevropa vs Amerika - Raqobat va O'ziga Xosliklar</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Regional Comparison Table -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-gradient-primary text-white p-3">
+                            <h4 class="mb-0">
+                                <i class="fas fa-globe-americas me-2"></i>Mintaqalar Bo'yicha Batafsil Tahlil
+                            </h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover align-middle">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th width="15%">Ko'rsatkich</th>
+                                            <th width="28%" class="text-center bg-primary">
+                                                🌏 OSIYO<br>
+                                                <small class="fw-normal">(Singapore, Hong Kong, Tokyo, Shanghai, Dubai)</small>
+                                            </th>
+                                            <th width="28%" class="text-center bg-success">
+                                                🌍 YEVROPA<br>
+                                                <small class="fw-normal">(London, Zurich, Frankfurt, Paris, Amsterdam)</small>
+                                            </th>
+                                            <th width="29%" class="text-center bg-warning text-dark">
+                                                🌎 AMERIKA<br>
+                                                <small class="fw-normal">(NY, SF, LA, Chicago, Toronto)</small>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">Umumiy Bozor Kapitalizatsiyasi</td>
+                                            <td class="text-center">$38+ Trln <span class="badge bg-info">33%</span></td>
+                                            <td class="text-center">$22+ Trln <span class="badge bg-info">19%</span></td>
+                                            <td class="text-center">$55+ Trln <span class="badge bg-success">48%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">FX Trading Ulushi</td>
+                                            <td class="text-center">42% <span class="badge bg-success">Eng yuqori</span></td>
+                                            <td class="text-center">43% <span class="badge bg-warning text-dark">Leader</span></td>
+                                            <td class="text-center">15%</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Fintech Startuplar</td>
+                                            <td class="text-center">8,500+ <span class="badge bg-primary">Tez o'sish</span></td>
+                                            <td class="text-center">6,200+</td>
+                                            <td class="text-center">11,000+ <span class="badge bg-success">Eng ko'p</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">IPO Faolligi (2023)</td>
+                                            <td class="text-center">$67 mlrd <span class="badge bg-success">Leader</span></td>
+                                            <td class="text-center">$28 mlrd</td>
+                                            <td class="text-center">$45 mlrd</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">O'rtacha GFCI Rating</td>
+                                            <td class="text-center">715 <span class="badge bg-warning text-dark">Yuqori</span></td>
+                                            <td class="text-center">682</td>
+                                            <td class="text-center">725 <span class="badge bg-success">Eng yuqori</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Bandlik (Moliya sohasi)</td>
+                                            <td class="text-center">3.2M+ xodim</td>
+                                            <td class="text-center">2.5M+ xodim</td>
+                                            <td class="text-center">2.8M+ xodim</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Wealth Management AUM</td>
+                                            <td class="text-center">$15+ Trln</td>
+                                            <td class="text-center">$18+ Trln <span class="badge bg-success">Leader</span></td>
+                                            <td class="text-center">$16+ Trln</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Korporativ Soliq Stavkasi</td>
+                                            <td class="text-center">17% (o'rtacha) <span class="badge bg-success">Eng past</span></td>
+                                            <td class="text-center">23% (o'rtacha)</td>
+                                            <td class="text-center">25% (o'rtacha)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regional Strengths Visualization -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-lg h-100 region-card asia-card">
+                        <div class="card-header bg-primary text-white p-3">
+                            <h5 class="mb-0 text-center">🌏 OSIYO - Kuchli Tomonlar</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-rocket text-primary me-2"></i>Tez O'sish</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-primary" style="width: 95%">95%</div>
+                                </div>
+                                <small>2010-2024: 320% GDP o'sish (Osiyo-4 tigers)</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-users text-primary me-2"></i>Demographics</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-primary" style="width: 88%">88%</div>
+                                </div>
+                                <small>Yosh va o'sib boruvchi o'rta sinf: 2 mlrd kishi</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-microchip text-primary me-2"></i>Texnologiya</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-primary" style="width: 90%">90%</div>
+                                </div>
+                                <small>Fintech adoption: 64% (global o'rtacha 52%)</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-percentage text-primary me-2"></i>Soliq Imtiyozlari</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-primary" style="width: 92%">92%</div>
+                                </div>
+                                <small>Dubai 0%, Singapore 17%, Hong Kong 16.5%</small>
+                            </div>
+
+                            <div class="alert alert-primary mb-0 mt-3">
+                                <strong>Strategiya:</strong> Gateway to Asia, low-tax hub, tech innovation
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-lg h-100 region-card europe-card">
+                        <div class="card-header bg-success text-white p-3">
+                            <h5 class="mb-0 text-center">🌍 YEVROPA - Kuchli Tomonlar</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-landmark text-success me-2"></i>Legacy va Ta'rif</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-success" style="width: 98%">98%</div>
+                                </div>
+                                <small>500+ yillik moliya tarixi (Amsterdam 1602)</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-balance-scale text-success me-2"></i>Regulyatsiya</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-success" style="width: 96%">96%</div>
+                                </div>
+                                <small>MiFID II, GDPR - global standartlar</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-user-tie text-success me-2"></i>Private Banking</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-success" style="width: 100%">100%</div>
+                                </div>
+                                <small>Zurich va Geneva - $3+ Trln AUM</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-globe text-success me-2"></i>Cross-border</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-success" style="width: 94%">94%</div>
+                                </div>
+                                <small>EU passport - 27 mamlakat uchun bitta litsenziya</small>
+                            </div>
+
+                            <div class="alert alert-success mb-0 mt-3">
+                                <strong>Strategiya:</strong> Stability, regulation excellence, wealth management
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-lg h-100 region-card america-card">
+                        <div class="card-header bg-warning text-dark p-3">
+                            <h5 class="mb-0 text-center">🌎 AMERIKA - Kuchli Tomonlar</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-chart-line text-warning me-2"></i>Capital Markets</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-warning" style="width: 100%">100%</div>
+                                </div>
+                                <small>NYSE + NASDAQ = $48 Trln (global 42%)</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-lightbulb text-warning me-2"></i>Innovation</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-warning" style="width: 97%">97%</div>
+                                </div>
+                                <small>VC funding 2023: $215 mlrd (global 50%)</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-dollar-sign text-warning me-2"></i>USD Dominance</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-warning" style="width: 99%">99%</div>
+                                </div>
+                                <small>88% of FX transactions involve USD</small>
+                            </div>
+
+                            <div class="strength-item mb-3">
+                                <h6><i class="fas fa-university text-warning me-2"></i>Institutlar</h6>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-warning" style="width: 96%">96%</div>
+                                </div>
+                                <small>Top 10 global banks - 6 tasi amerikalik</small>
+                            </div>
+
+                            <div class="alert alert-warning mb-0 mt-3">
+                                <strong>Strategiya:</strong> Size, liquidity, innovation, USD hegemony
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competition Trends -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-dark text-white p-3">
+                            <h5 class="mb-0">
+                                <i class="fas fa-chart-bar me-2"></i>Raqobat Tendensiyalari (2024-2030 Prognoz)
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="trend-box bg-primary bg-opacity-10 p-3 rounded">
+                                        <h6 class="text-primary">📈 Osiyo O'sib Boradi</h6>
+                                        <ul class="small mb-0">
+                                            <li>China GDP 2030: $35+ Trln (US'dan oshadi)</li>
+                                            <li>India - 5-chi ekonomika bo'ladi</li>
+                                            <li>ASEAN moliya integratsiyasi</li>
+                                            <li>O'rta Sharq diversifikatsiya (Vision 2030)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="trend-box bg-success bg-opacity-10 p-3 rounded">
+                                        <h6 class="text-success">🔄 Yevropa Konsolidatsiya</h6>
+                                        <ul class="small mb-0">
+                                            <li>Capital Markets Union (CMU) tugallanadi</li>
+                                            <li>London post-Brexit adaptatsiya</li>
+                                            <li>Green finance leadership</li>
+                                            <li>Digital euro joriy etiladi</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="trend-box bg-warning bg-opacity-10 p-3 rounded">
+                                        <h6 class="text-warning">💪 Amerika Dominance Saqlanadi</h6>
+                                        <ul class="small mb-0">
+                                            <li>Tech finance (AI, blockchain) leadership</li>
+                                            <li>VC ekosistema kuchayadi</li>
+                                            <li>USD reserve currency (60%+ saqlanadi)</li>
+                                            <li>ESG va sustainable finance'da raqobat</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=11 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=13 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.region-card {
+    transition: transform 0.3s ease;
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+}
+
+.strength-item h6 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.progress {
+    height: 20px;
+    border-radius: 10px;
+}
+
+.trend-box {
+    border-left: 4px solid;
+    height: 100%;
+}
+
+.trend-box h6 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+</style>
+{% endblock %}

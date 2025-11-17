@@ -1,0 +1,245 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Case Study: London & Singapore{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold">🇬🇧 London & 🇸🇬 Singapore</h1>
+                <p class="lead text-muted">Global Moliya Markazlarining Ikki Yulduz</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- London -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-primary text-white p-3">
+                            <h3 class="mb-0"><i class="fas fa-crown me-2"></i>🇬🇧 London - The City</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="stat-box">
+                                        <h6 class="text-muted">GFCI Reytingi</h6>
+                                        <h3 class="text-primary">744 ball</h3>
+                                        <small>(2-o'rin)</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-box">
+                                        <h6 class="text-muted">FX Hajmi</h6>
+                                        <h3 class="text-primary">$2.4 Trln</h3>
+                                        <small>Kunlik (38% global)</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-box">
+                                        <h6 class="text-muted">Xalqaro Banklar</h6>
+                                        <h3 class="text-primary">250+</h3>
+                                        <small>Filiallar</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <h5 class="text-success mb-3"><i class="fas fa-star me-2"></i>Kuchli Tomonlari</h5>
+                                    <ul class="custom-list">
+                                        <li><strong>Forex yetakchisi:</strong> Dunyodagi eng katta valyuta savdo markazi</li>
+                                        <li><strong>Vaqt zonasi:</strong> Osiyo va Amerika o'rtasida ideal joylashuv</li>
+                                        <li><strong>English law:</strong> Xalqaro shartnomalar uchun standart</li>
+                                        <li><strong>Tarixiy ta'sir:</strong> 300 yillik moliyaviy tajriba</li>
+                                        <li><strong>Sug'urta markazi:</strong> Lloyd's of London - global sug'urta yetakchisi</li>
+                                        <li><strong>Xalqaro talant:</strong> 350,000+ moliya mutaxassislari</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-warning mb-3"><i class="fas fa-exclamation-circle me-2"></i>Qiyinchiliklar</h5>
+                                    <ul class="custom-list">
+                                        <li><strong>Brexit ta'siri:</strong> EU bilan aloqalar murakkablashdi</li>
+                                        <li><strong>Regulyatsiya:</strong> Post-Brexit qoidalar noaniqlik yaratmoqda</li>
+                                        <li><strong>Raqobat:</strong> Paris, Frankfurt, Amsterdam raqobatni kuchaytirdi</li>
+                                        <li><strong>Soliqlar:</strong> Yuqori daromad solig'i (45%)</li>
+                                        <li><strong>Xarajatlar:</strong> Ofis va yashash xarajatlari juda yuqori</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 p-3 bg-light rounded">
+                                <h6 class="text-primary mb-2"><i class="fas fa-key me-2"></i>Asosiy Strategiya</h6>
+                                <p class="mb-0">London Brexit'dan keyin "Global Britain" kontseptsiyasini rivojlantirmoqda - 
+                                EU'dan tashqarida, lekin global miqyosda yanada ochiq va raqobatbardosh moliya markazi sifatida.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Singapore -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-success text-white p-3">
+                            <h3 class="mb-0"><i class="fas fa-gem me-2"></i>🇸🇬 Singapore - Asia's Fintech Hub</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="row mb-4">
+                                <div class="col-md-4">
+                                    <div class="stat-box">
+                                        <h6 class="text-muted">GFCI Reytingi</h6>
+                                        <h3 class="text-success">740 ball</h3>
+                                        <small>(3-o'rin)</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-box">
+                                        <h6 class="text-muted">Wealth Management</h6>
+                                        <h3 class="text-success">$4+ Trln</h3>
+                                        <small>Boshqarilayotgan aktivlar</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="stat-box">
+                                        <h6 class="text-muted">Fintech Kompaniyalar</h6>
+                                        <h3 class="text-success">1,400+</h3>
+                                        <small>Startaplar</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <h5 class="text-success mb-3"><i class="fas fa-trophy me-2"></i>Muvaffaqiyat Formulasi</h5>
+                                    <ul class="custom-list">
+                                        <li><strong>Siyosiy barqarorlik:</strong> Mustahkam hukumat va aniq siyosat</li>
+                                        <li><strong>Pro-business muhit:</strong> Past soliqlar (17% korporativ)</li>
+                                        <li><strong>Fintech innovatsiyalar:</strong> Regulatory sandbox va raqamli bank litsenziyalari</li>
+                                        <li><strong>Strategik joylashuv:</strong> Osiyo vaqt zonasining markazi</li>
+                                        <li><strong>MAS (Monetary Authority):</strong> Progressiv va innovatsion regulyator</li>
+                                        <li><strong>Smart Nation:</strong> Raqamli infratuzilmada dunyo yetakchisi</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5 class="text-info mb-3"><i class="fas fa-rocket me-2"></i>Fintech Leadership</h5>
+                                    <ul class="custom-list">
+                                        <li><strong>Digital Banking:</strong> Grab, Sea (Shopee) raqamli banklari</li>
+                                        <li><strong>Blockchain Hub:</strong> 250+ blockchain kompaniyalar</li>
+                                        <li><strong>AI & Data:</strong> Machine learning moliyaviy xizmatlarda</li>
+                                        <li><strong>Green Finance:</strong> Barqaror moliya bo'yicha ASEAN yetakchisi</li>
+                                        <li><strong>Cross-border Payments:</strong> PayNow va FAST tizimlar</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row g-3 mt-4">
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-warning bg-opacity-10 rounded">
+                                        <h6 class="text-warning mb-2"><i class="fas fa-exclamation-triangle me-2"></i>Cheklovlar</h6>
+                                        <ul class="mb-0 small">
+                                            <li>Kichik ichki bozor (5.6 mln aholi)</li>
+                                            <li>Yuqori yashash xarajatlari</li>
+                                            <li>Talant yetishmasligi (immigration'ga bog'liq)</li>
+                                            <li>Hong Kong va Shanghay bilan raqobat</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-success bg-opacity-10 rounded">
+                                        <h6 class="text-success mb-2"><i class="fas fa-chart-line me-2"></i>Kelajak Yo'nalishi</h6>
+                                        <ul class="mb-0 small">
+                                            <li>Wealth Management markazi bo'lish</li>
+                                            <li>ASEAN moliya hub sifatida mustahkamlanish</li>
+                                            <li>Green finance va ESG yetakchiligi</li>
+                                            <li>Digital assets va tokenization</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Taqqoslash -->
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <h5 class="alert-heading"><i class="fas fa-balance-scale me-2"></i>London vs Singapore</h5>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p class="mb-0"><strong>Umumiyliklar:</strong> Ikkalasi ham global markaz, kuchli qonunchilik, xalqaro aloqalar</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-0"><strong>Farqlar:</strong> London - tarixiy va Evropa, Singapore - fintech va Osiyo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=6 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=8 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.stat-box {
+    text-align: center;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.stat-box h6 {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.stat-box h3 {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.custom-list li:last-child {
+    border-bottom: none;
+}
+
+.custom-list li strong {
+    color: #333;
+}
+</style>
+{% endblock %}

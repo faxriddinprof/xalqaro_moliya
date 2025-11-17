@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Jahon Moliya Markazlari{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <!-- Slide sarlavhasi -->
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-3 mb-3 fw-bold gradient-text">Jahon Moliya Markazlari</h1>
+                <h2 class="h3 text-muted mb-4">Rivojlanish Bosqichlari va Global Tendentsiyalar</h2>
+                <div class="d-flex justify-content-center align-items-center gap-3 text-muted">
+                    <span><i class="fas fa-user me-2"></i>Fariddin Baxtiyorov</span>
+                    <span>|</span>
+                    <span><i class="fas fa-university me-2"></i>TDIU</span>
+                    <span>|</span>
+                    <span><i class="fas fa-book me-2"></i>Xalqaro Moliya</span>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Mavzuning ahamiyati -->
+            <div class="row mb-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="alert alert-primary border-0 shadow-sm">
+                        <h4 class="alert-heading mb-3">
+                            <i class="fas fa-lightbulb me-2"></i>Mavzuning Dolzarbligi
+                        </h4>
+                        <p class="mb-0 lead">
+                            XXI asrda moliya markazlari global iqtisodiyotning asosiy harakatlantiruvchi kuchi hisoblanadi. 
+                            Ularning rivojlanish bosqichlarini o'rganish orqali O'zbekiston va mintaqamiz uchun strategik 
+                            yo'nalishlarni belgilash mumkin.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prezentatsiya rejasi -->
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="mb-4 text-center">
+                        <i class="fas fa-list-ol me-2 text-primary"></i>Prezentatsiya Rejasi
+                    </h3>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start">
+                                        <div class="badge bg-primary rounded-circle p-3 me-3">
+                                            <i class="fas fa-book-open"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-2">1. Nazariy Asos</h5>
+                                            <p class="card-text small text-muted mb-0">
+                                                Moliya markazlari tushunchasi, ta'rifi va global ahamiyati
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start">
+                                        <div class="badge bg-success rounded-circle p-3 me-3">
+                                            <i class="fas fa-history"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-2">2. Tarixiy Tahlil</h5>
+                                            <p class="card-text small text-muted mb-0">
+                                                Mercantile davridan digital eraga qadar xronologik rivojlanish
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start">
+                                        <div class="badge bg-warning rounded-circle p-3 me-3">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-2">3. Bosqichlar va KPI'lar</h5>
+                                            <p class="card-text small text-muted mb-0">
+                                                5 ta rivojlanish bosqichi va ularning indikatorlari
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start">
+                                        <div class="badge bg-info rounded-circle p-3 me-3">
+                                            <i class="fas fa-city"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-2">4. Case Study</h5>
+                                            <p class="card-text small text-muted mb-0">
+                                                New York, London, Singapore, Dubai tajribasi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start">
+                                        <div class="badge bg-danger rounded-circle p-3 me-3">
+                                            <i class="fas fa-balance-scale"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-2">5. Siyosat va Risklar</h5>
+                                            <p class="card-text small text-muted mb-0">
+                                                Qonunchilik, soliqlar, AML/KYC standartlari
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start">
+                                        <div class="badge bg-secondary rounded-circle p-3 me-3">
+                                            <i class="fas fa-flag"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="card-title mb-2">6. O'zbekiston uchun Tavsiyalar</h5>
+                                            <p class="card-text small text-muted mb-0">
+                                                Amaliy strategiyalar va yo'l xaritasi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=2 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hover-card {
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+</style>
+{% endblock %}

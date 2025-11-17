@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Tarixiy Rivojlanish{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-primary">Tarixiy Rivojlanish Bosqichlari</h1>
+                <p class="lead text-muted">Mercantile Davridan Digital Eraga</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Timeline -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="timeline">
+                        <!-- 1. Mercantile Era -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-primary"></div>
+                            <div class="timeline-content">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h4 class="mb-0 text-primary">
+                                                <i class="fas fa-ship me-2"></i>1. Mercantile Era
+                                            </h4>
+                                            <span class="badge bg-primary">XVI-XVIII asrlar</span>
+                                        </div>
+                                        <p class="mb-2"><strong>Asosiy shaharlar:</strong> Amsterdam, Venetsia, Genuya</p>
+                                        <p class="mb-3">
+                                            Savdo-sotiq markazlari, dengiz savdosi, birinchi banklar va birjalarning paydo bo'lishi. 
+                                            Amsterdam birjasi (1602) - dunyodagi birinchi fond birjasi.
+                                        </p>
+                                        <div class="row g-2">
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Dengiz savdo yo'llari
+                                                </small>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Birinchi aksiyadorlik kompaniyalari
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Industrial Era -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h4 class="mb-0 text-success">
+                                                <i class="fas fa-industry me-2"></i>2. Industrial Era
+                                            </h4>
+                                            <span class="badge bg-success">XIX - XX asr boshi</span>
+                                        </div>
+                                        <p class="mb-2"><strong>Asosiy shaharlar:</strong> London, New York, Paris</p>
+                                        <p class="mb-3">
+                                            Sanoat inqilobi, temir yo'l qurilishi, telegraf ixtiro qilinishi. London - 
+                                            "Dunyoning moliyaviy poytaxti". Oltin standart va sterling zonas tizimi.
+                                        </p>
+                                        <div class="row g-2">
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Markaziy banklarning rivojlanishi
+                                                </small>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Xalqaro kredit tizimi
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Post-War Bretton Woods Era -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-warning"></div>
+                            <div class="timeline-content">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h4 class="mb-0 text-warning">
+                                                <i class="fas fa-handshake me-2"></i>3. Bretton Woods Era
+                                            </h4>
+                                            <span class="badge bg-warning">1945-1970 yillar</span>
+                                        </div>
+                                        <p class="mb-2"><strong>Yetakchi markaz:</strong> New York (AQSh dollari hegemoniyasi)</p>
+                                        <p class="mb-3">
+                                            IMF va Jahon Bankining tashkil topishi. Dollar - global rezerv valyutasi. 
+                                            AQSh moliyaviy tizimining global dominantligi boshlandi.
+                                        </p>
+                                        <div class="row g-2">
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Xalqaro moliyaviy institutlar
+                                                </small>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Dollar standart tizimi
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Globalization Era -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-info"></div>
+                            <div class="timeline-content">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h4 class="mb-0 text-info">
+                                                <i class="fas fa-globe me-2"></i>4. Globalizatsiya Davri
+                                            </h4>
+                                            <span class="badge bg-info">1980-2000 yillar</span>
+                                        </div>
+                                        <p class="mb-2"><strong>Yangi markazlar:</strong> Tokyo, Hong Kong, Singapore, Frankfurt</p>
+                                        <p class="mb-3">
+                                            Moliyaviy bozorlarning liberalizatsiyasi, derivativlar bozorining rivojlanishi, 
+                                            24/7 savdo tizimi. Osiyo "yo'lbars" davlatlarining moliyaviy markazlari.
+                                        </p>
+                                        <div class="row g-2">
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Ko'p qutbli moliya tizimi
+                                                </small>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Elektronik savdo platformalari
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Digital/Fintech Era -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker bg-danger"></div>
+                            <div class="timeline-content">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h4 class="mb-0 text-danger">
+                                                <i class="fas fa-microchip me-2"></i>5. Digital / Fintech Era
+                                            </h4>
+                                            <span class="badge bg-danger">2000-Hozir</span>
+                                        </div>
+                                        <p class="mb-2"><strong>Innovatsiya markazlari:</strong> San Francisco, Shanghai, Dubai</p>
+                                        <p class="mb-3">
+                                            Blockchain, kriptovalyutalar, AI, robo-advisory, P2P lending, digital banking. 
+                                            Fintech startaplari va "challenger banks" ning tez rivojlanishi.
+                                        </p>
+                                        <div class="row g-2">
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    DeFi va blockchain texnologiyalari
+                                                </small>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <small class="text-muted">
+                                                    <i class="fas fa-check-circle text-success me-1"></i>
+                                                    Sun'iy intellekt va big data
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=2 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=4 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #667eea, #764ba2);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 60px;
+    margin-bottom: 30px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.timeline-content {
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-marker {
+        left: 7px;
+    }
+    
+    .timeline-item {
+        padding-left: 45px;
+    }
+}
+</style>
+{% endblock %}

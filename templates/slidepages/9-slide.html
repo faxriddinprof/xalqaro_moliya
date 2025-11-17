@@ -1,0 +1,336 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Siyosat va Regulyatsiya{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-primary">Siyosat va Regulyatsiya</h1>
+                <p class="lead text-muted">Moliya Markazlari Rivojlanishida Davlat Roli</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Asosiy siyosat yo'nalishlari -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <h4 class="mb-4 text-center">
+                        <i class="fas fa-balance-scale text-primary me-2"></i>6 Ta Asosiy Siyosat Yo'nalishi
+                    </h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="policy-card">
+                                <div class="policy-icon bg-primary">
+                                    <i class="fas fa-gavel"></i>
+                                </div>
+                                <h5>1. Qonunchilik Bazasi</h5>
+                                <ul class="small">
+                                    <li><strong>Property huquqlari:</strong> Investorlar mulkining himoyasi</li>
+                                    <li><strong>Shartnoma huquqi:</strong> Xalqaro standartlar (English law, NY law)</li>
+                                    <li><strong>Bankruptcy qonunlari:</strong> Shaffof va adolatli bankrotlik</li>
+                                    <li><strong>Anti-corruption:</strong> Korrupsiyaga qarshi kuchli choralar</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="policy-card">
+                                <div class="policy-icon bg-success">
+                                    <i class="fas fa-percentage"></i>
+                                </div>
+                                <h5>2. Soliq Siyosati</h5>
+                                <ul class="small">
+                                    <li><strong>Raqobatbardosh stavkalar:</strong> 15-25% korporativ soliq</li>
+                                    <li><strong>Double taxation avoidance:</strong> Ikki tomonlama shartnomalar</li>
+                                    <li><strong>Capital gains tax:</strong> Past yoki yo'q (Dubai, Singapore)</li>
+                                    <li><strong>VAT/GST:</strong> Moliyaviy xizmatlarga zero-rated</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="policy-card">
+                                <div class="policy-icon bg-info">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h5>3. Kadrlar Siyosati</h5>
+                                <ul class="small">
+                                    <li><strong>Talent visa:</strong> Yuqori malakali mutaxassislarga oson visa</li>
+                                    <li><strong>Education:</strong> Moliya bo'yicha kuchli universitetlar</li>
+                                    <li><strong>Professional certification:</strong> CFA, ACCA, CPA dasturlari</li>
+                                    <li><strong>Multiculturalism:</strong> Xalqaro mutaxassislar uchun ochiq muhit</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="policy-card">
+                                <div class="policy-icon bg-warning">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h5>4. AML/KYC Standartlari</h5>
+                                <ul class="small">
+                                    <li><strong>FATF recommendations:</strong> 40 ta tavsiya amalga oshirish</li>
+                                    <li><strong>CDD/EDD:</strong> Customer due diligence protokollari</li>
+                                    <li><strong>Suspicious transaction reporting:</strong> STR tizimi</li>
+                                    <li><strong>Sanctions compliance:</strong> OFAC, UN sanctions rioya</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="policy-card">
+                                <div class="policy-icon bg-danger">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <h5>5. Pul-Valyuta Siyosati</h5>
+                                <ul class="small">
+                                    <li><strong>Exchange rate stability:</strong> Barqaror valyuta kursi</li>
+                                    <li><strong>Capital account liberalization:</strong> Kapital harakatlanishi erkinligi</li>
+                                    <li><strong>Forex reserves:</strong> Etarli tashqi valyuta zaxiralari</li>
+                                    <li><strong>Convertibility:</strong> To'liq konvertatsiya qilinadigan valyuta</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="policy-card">
+                                <div class="policy-icon bg-secondary">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h5>6. Innovatsiya Siyosati</h5>
+                                <ul class="small">
+                                    <li><strong>Regulatory sandbox:</strong> Yangi texnologiyalarni test qilish</li>
+                                    <li><strong>Fintech licensing:</strong> Raqamli bank, crypto litsenziyalari</li>
+                                    <li><strong>R&D incentives:</strong> Tadqiqot uchun soliq imtiyozlari</li>
+                                    <li><strong>Open banking:</strong> API va data sharing standartlari</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regulyatsiya modellari -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <h4 class="mb-3 text-center">
+                        <i class="fas fa-sitemap text-success me-2"></i>Regulyatsiya Modellari
+                    </h4>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-primary text-white">
+                                    <h5 class="mb-0">Unified Regulator Model</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-2"><strong>Misol:</strong> UK (FCA), Singapore (MAS), Japan (FSA)</p>
+                                    <p class="mb-3"><strong>Xususiyati:</strong> Bitta organ barcha moliyaviy xizmatlarni tartibga soladi</p>
+                                    <div class="pros-cons">
+                                        <h6 class="text-success"><i class="fas fa-plus-circle me-2"></i>Afzalliklar:</h6>
+                                        <ul class="small mb-3">
+                                            <li>Yagona standartlar va qoidalar</li>
+                                            <li>Cross-sector muammolarni hal qilish oson</li>
+                                            <li>Investorlar uchun tushunarli</li>
+                                        </ul>
+                                        <h6 class="text-danger"><i class="fas fa-minus-circle me-2"></i>Kamchiliklar:</h6>
+                                        <ul class="small mb-0">
+                                            <li>Juda katta va murakkab tashkilot</li>
+                                            <li>Sector-specific tajriba yetishmasligi</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100">
+                                <div class="card-header bg-success text-white">
+                                    <h5 class="mb-0">Twin Peaks Model</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p class="mb-2"><strong>Misol:</strong> Australia (APRA + ASIC), Netherlands</p>
+                                    <p class="mb-3"><strong>Xususiyati:</strong> 2 ta regulator - prudential va conduct</p>
+                                    <div class="pros-cons">
+                                        <h6 class="text-success"><i class="fas fa-plus-circle me-2"></i>Afzalliklar:</h6>
+                                        <ul class="small mb-3">
+                                            <li>Aniq mas'uliyat taqsimoti</li>
+                                            <li>Specialized expertise</li>
+                                            <li>Consumer protection'ga e'tibor</li>
+                                        </ul>
+                                        <h6 class="text-danger"><i class="fas fa-minus-circle me-2"></i>Kamchiliklar:</h6>
+                                        <ul class="small mb-0">
+                                            <li>Ikki organ o'rtasida koordinatsiya kerak</li>
+                                            <li>Ba'zan overlap muammolari</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Performance Indicators -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-gradient-primary text-white p-3">
+                            <h4 class="mb-0">
+                                <i class="fas fa-chart-bar me-2"></i>Siyosat Samaradorligini Baholash
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <div class="kpi-box">
+                                        <div class="kpi-icon bg-primary">
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <h6>Ease of Doing Business</h6>
+                                        <p class="small mb-0">World Bank reytingi - top 30 ichida bo'lish</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="kpi-box">
+                                        <div class="kpi-icon bg-success">
+                                            <i class="fas fa-shield-alt"></i>
+                                        </div>
+                                        <h6>Corruption Perception</h6>
+                                        <p class="small mb-0">Transparency Int'l - 70+ ball</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="kpi-box">
+                                        <div class="kpi-icon bg-warning">
+                                            <i class="fas fa-balance-scale"></i>
+                                        </div>
+                                        <h6>Rule of Law Index</h6>
+                                        <p class="small mb-0">World Justice Project - top 25%</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="kpi-box">
+                                        <div class="kpi-icon bg-info">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                        <h6>Regulatory Efficiency</h6>
+                                        <p class="small mb-0">Litsenziya olish vaqti - 1-3 oy</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=8 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=10 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.policy-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.policy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.policy-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    color: white;
+    font-size: 24px;
+}
+
+.policy-card h5 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 16px;
+}
+
+.policy-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.policy-card ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.policy-card ul li:last-child {
+    border-bottom: none;
+}
+
+.pros-cons ul {
+    margin-bottom: 10px;
+}
+
+.kpi-box {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.kpi-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.kpi-box h6 {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+</style>
+{% endblock %}

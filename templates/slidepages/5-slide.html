@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Transformative Hub{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-danger">Bosqich 5: Transformative Hub</h1>
+                <p class="lead text-muted">Innovation va Kelajak Texnologiyalari Markazi</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Asosiy xususiyatlar -->
+            <div class="row mb-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-lg bg-gradient-danger text-white">
+                        <div class="card-body p-4">
+                            <h4 class="mb-3">
+                                <i class="fas fa-rocket me-2"></i>Eng Yuqori Daraja: Innovatsion Yetakchi
+                            </h4>
+                            <p class="lead mb-0">
+                                Bu bosqichda moliya markazi faqat xizmat ko'rsatuvchi emas, balki global moliyaviy 
+                                innovatsiyalarni yaratuvchi va yo'nalishni belgilovchi markaz bo'lib xizmat qiladi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Asosiy indikatorlar -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-3">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon bg-primary">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3 class="stat-value">$1+ Trln</h3>
+                        <p class="stat-label">Bozor Kapitalizatsiyasi</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon bg-success">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3 class="stat-value">$500+ Mlrd</h3>
+                        <p class="stat-label">Kunlik FX Hajmi</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon bg-warning">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="stat-value">750+</h3>
+                        <p class="stat-label">GFCI Reytingi</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card text-center">
+                        <div class="stat-icon bg-danger">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="stat-value">500+</h3>
+                        <p class="stat-label">Fintech Startap</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Xususiyatlar -->
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger mb-3">
+                                <i class="fas fa-microchip me-2"></i>Texnologik Innovatsiyalar
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Blockchain va DeFi:</strong> Markazlashtirilmagan moliya ekotizimi
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>AI va Machine Learning:</strong> Avtomatlashtirilgan savdo va tahlil
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Quantum Computing:</strong> Murakkab moliyaviy modellashtirish
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>RegTech:</strong> Regulyatsiyani avtomatlashtirish
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger mb-3">
+                                <i class="fas fa-users me-2"></i>Ekosistema va Ta'lim
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Dunyodagi Eng Yaxshi Universitetlar:</strong> MIT, Stanford, Oxford
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Inkubatorlar va Akseleratorlar:</strong> Y Combinator, Techstars
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Venture Capital Fondi:</strong> $10+ mlrd innovatsiya investitsiyalari
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Global Talant Magnit:</strong> Dunyoning eng yaxshi mutaxassislari
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger mb-3">
+                                <i class="fas fa-shield-alt me-2"></i>Regulyatsiya va Standartlar
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Proaktiv Qonunchilik:</strong> Innovatsiyalarni qo'llab-quvvatlovchi
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Sandbox Muhit:</strong> Yangi texnologiyalarni test qilish uchun
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Xalqaro Standartlarni Belgilash:</strong> Global namunaviy amaliyot
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Kiberxavfsizlik:</strong> Eng yuqori himoya standartlari
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger mb-3">
+                                <i class="fas fa-globe-americas me-2"></i>Global Ta'sir
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Standartlarni Belgilaydi:</strong> Boshqa markazlar uchun namuna
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Global Policy Making:</strong> Xalqaro qoidalarni shakllantirishda ishtirok
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Crisis Management:</strong> Global moliyaviy inqirozlarni boshqarish
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Barqarorlik:</strong> ESG va yashil moliya yetakchiligi
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Misol shaharlar -->
+            <div class="row mt-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <h5 class="alert-heading">
+                            <i class="fas fa-map-marker-alt me-2"></i>Hozirgi Transformative Hub'lar
+                        </h5>
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <p class="mb-2"><strong>🇺🇸 New York (Wall Street):</strong> Global moliya poytaxti, fintech innovatsiyalar markazi</p>
+                                <p class="mb-2"><strong>🇬🇧 London (City):</strong> Evropa moliya yetakchisi, forex va sug'urta markazi</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-2"><strong>🇺🇸 San Francisco (Silicon Valley):</strong> Fintech va blockchain innovatsiyalar</p>
+                                <p class="mb-0"><strong>🇸🇬 Singapore:</strong> Osiyo fintech hub, smart-city moliya tizimi</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=4 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=6 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.bg-gradient-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 24px;
+    color: white;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin: 10px 0;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+}
+</style>
+{% endblock %}

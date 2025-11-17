@@ -1,0 +1,320 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Case Study: Dubai{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold">🇦🇪 Case Study: Dubai</h1>
+                <p class="lead text-muted">O'rta Sharq va Afrika ning Moliya Darv azasi</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Umumiy ma'lumot -->
+            <div class="row mb-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-0 shadow-lg" style="background: linear-gradient(135deg, #c59d5f 0%, #8b7355 100%);">
+                        <div class="card-body p-4 text-white">
+                            <h4 class="mb-3">
+                                <i class="fas fa-rocket me-2"></i>20 Yilda Yaratilgan Mo'jiza
+                            </h4>
+                            <p class="lead mb-0">
+                                Dubai 2000-yillarning boshida nisbatan kichik savdo porti bo'lgan shahardan 
+                                bugun mintaqaning eng kuchli moliya markaziga aylandi. Bu tez o'sishning 
+                                noyob namunasi hisoblanadi.
+                            </p>
+                            <div class="row mt-4">
+                                <div class="col-md-3">
+                                    <h6>GFCI Reytingi</h6>
+                                    <h3>714 ball</h3>
+                                    <small>(13-o'rin, 2024)</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6>DIFC Kompaniyalar</h6>
+                                    <h3>5,000+</h3>
+                                    <small>Ro'yxatdan o'tgan</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6>Wealth Management</h6>
+                                    <h3>$800+ Mlrd</h3>
+                                    <small>Boshqarilayotgan</small>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6>O'sish Sur'ati</h6>
+                                    <h3>15-20%</h3>
+                                    <small>Yillik (2010-2020)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Muvaffaqiyat strategiyasi -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i>Strategik Qadamlar</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline-sm">
+                                <div class="timeline-sm-item">
+                                    <div class="year-badge">2004</div>
+                                    <div class="content">
+                                        <h6>DIFC Tashkil Topishi</h6>
+                                        <p class="small">Dubai International Financial Centre - erkin iqtisodiy zona, 
+                                        alohida qonunchilik va sud tizimi bilan.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-sm-item">
+                                    <div class="year-badge">2006</div>
+                                    <div class="content">
+                                        <h6>DFSA - Mustaqil Regulyator</h6>
+                                        <p class="small">Dubai Financial Services Authority - xalqaro standartlarga 
+                                        muvofiq regulyatsiya organi.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-sm-item">
+                                    <div class="year-badge">2009</div>
+                                    <div class="content">
+                                        <h6>DIFC Courts</h6>
+                                        <p class="small">English law asosidagi sud tizimi - xalqaro investorlar 
+                                        uchun ishonch yaratdi.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-sm-item">
+                                    <div class="year-badge">2020+</div>
+                                    <div class="content">
+                                        <h6>Fintech va Innovation Hub</h6>
+                                        <p class="small">Blockchain, AI, digital assets - yangi texnologiyalarga 
+                                        ochiq siyosat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-info text-white">
+                            <h5 class="mb-0"><i class="fas fa-key me-2"></i>Raqobat Afzalliklari</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="advantage-item mb-3">
+                                <div class="advantage-icon bg-success">💰</div>
+                                <div class="advantage-content">
+                                    <h6>0% Soliq</h6>
+                                    <p class="small mb-0">Korporativ va shaxsiy daromad solig'i yo'q. 
+                                    Bu investorlar uchun katta jalb qiluvchi omil.</p>
+                                </div>
+                            </div>
+                            <div class="advantage-item mb-3">
+                                <div class="advantage-icon bg-warning">🌍</div>
+                                <div class="advantage-content">
+                                    <h6>Strategik Joylashuv</h6>
+                                    <p class="small mb-0">Osiyo, Yevropa va Afrika o'rtasida. 
+                                    4 soatlik parvozda 2 mlrd kishiga yetish mumkin.</p>
+                                </div>
+                            </div>
+                            <div class="advantage-item mb-3">
+                                <div class="advantage-icon bg-primary">✈️</div>
+                                <div class="advantage-content">
+                                    <h6>Yuqori Sifatli Infratuzilma</h6>
+                                    <p class="small mb-0">Dubai Airport, transport, telekommunikatsiya - 
+                                    dunyoning eng yaxshi darajasida.</p>
+                                </div>
+                            </div>
+                            <div class="advantage-item mb-3">
+                                <div class="advantage-icon bg-danger">🏠</div>
+                                <div class="advantage-content">
+                                    <h6>Yuqori Hayot Sifati</h6>
+                                    <p class="small mb-0">Xavfsizlik, qulaylik, ko'p madaniyatli muhit - 
+                                    xalqaro talantlarni jalb qiladi.</p>
+                                </div>
+                            </div>
+                            <div class="advantage-item">
+                                <div class="advantage-icon bg-secondary">🤝</div>
+                                <div class="advantage-content">
+                                    <h6>Business-Friendly Siyosat</h6>
+                                    <p class="small mb-0">Tez litsenziyalash, minimal byurokratiya, 
+                                    100% chet el mulki mumkin.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Yo'nalishlar -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 sector-card">
+                        <div class="card-body text-center">
+                            <div class="sector-icon">🏦</div>
+                            <h5>Islamic Finance</h5>
+                            <p class="small">Dunyoning eng yirik islomiy moliya markazi. 
+                            Shariah-compliant produktlar bo'yicha yetakchi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 sector-card">
+                        <div class="card-body text-center">
+                            <div class="sector-icon">💎</div>
+                            <h5>Wealth Management</h5>
+                            <p class="small">O'rta Sharq va Afrikaning boy shaxslari uchun 
+                            asosiy private banking markazi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 sector-card">
+                        <div class="card-body text-center">
+                            <div class="sector-icon">🪙</div>
+                            <h5>Crypto & Digital Assets</h5>
+                            <p class="small">Virtual Assets Regulatory Authority (VARA) - 
+                            kriptovalyutalar uchun aniq regulyatsiya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Qiyinchiliklar va kelajak -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="alert alert-warning border-0 shadow-sm">
+                        <h5 class="alert-heading"><i class="fas fa-exclamation-triangle me-2"></i>Qiyinchiliklar</h5>
+                        <ul class="mb-0 small">
+                            <li>Global markaz sifatida nisbatan yangi (tarixsizlik)</li>
+                            <li>Geosiyosiy xavflar (mintaqa barqarorligi)</li>
+                            <li>Neft narxi o'zgaruvchanligi (hali ham bog'liq)</li>
+                            <li>Raqobat: Abu Dhabi, Doha, Riyadh (GCC ichida)</li>
+                            <li>Kadrlar: mahalliy talant yetishmasligi</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="alert alert-success border-0 shadow-sm">
+                        <h5 class="alert-heading"><i class="fas fa-bullseye me-2"></i>2030 Maqsadlar</h5>
+                        <ul class="mb-0 small">
+                            <li>Top-10 global moliya markazlari qatoriga kirish</li>
+                            <li>Fintech va blockchain innovatsiyalar hub</li>
+                            <li>Barqaror moliya (Green/ESG) yetakchisi</li>
+                            <li>Family office va ultra-HNW markazi</li>
+                            <li>Expo 2020 momentum'ini davom ettirish</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Xulosa -->
+            <div class="row mt-3">
+                <div class="col-lg-10 mx-auto">
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <h5 class="alert-heading"><i class="fas fa-lightbulb me-2"></i>O'zbekiston Uchun Darslar</h5>
+                        <p class="mb-0">Dubai tajribasi shuni ko'rsatadiki, aniq strategiya, business-friendly muhit, 
+                        soliq imtiyozlari, zamonaviy infratuzilma va proaktiv qonunchilik orqali nisbatan qisqa muddatda 
+                        mintaqaviy moliya markazi bo'lish mumkin. Muhimi - uzoq muddatli viziya va izchil amalga oshirish.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=7 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=9 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.timeline-sm-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.timeline-sm-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.year-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.timeline-sm-item .content h6 {
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.advantage-item {
+    display: flex;
+    gap: 15px;
+    align-items: start;
+}
+
+.advantage-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    color: white;
+}
+
+.advantage-content h6 {
+    margin: 0 0 5px 0;
+    color: #333;
+    font-size: 15px;
+}
+
+.sector-card {
+    transition: all 0.3s ease;
+}
+
+.sector-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15) !important;
+}
+
+.sector-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+</style>
+{% endblock %}

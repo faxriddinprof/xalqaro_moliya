@@ -1,0 +1,339 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - O'zbekiston Tavsiyalari{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container-fluid">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-primary">O'zbekiston uchun Amaliy Tavsiyalar</h1>
+                <p class="lead text-muted">Toshkent - Regional Moliya Markazi (2030 Strategiya)</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Current State Analysis -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-gradient-primary text-white p-3">
+                            <h4 class="mb-0">
+                                <i class="fas fa-search me-2"></i>Hozirgi Holat va Potensial (SWOT Tahlil)
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="swot-box strengths-box p-3">
+                                        <h5 class="text-success"><i class="fas fa-plus-circle me-2"></i>Kuchli Tomonlar (Strengths)</h5>
+                                        <ul class="mb-0">
+                                            <li><strong>Geografik joylashuv:</strong> Markaziy Osiyo hub (75M population radius)</li>
+                                            <li><strong>Yosh demografiya:</strong> O'rtacha yosh 28.6 (potential workforce)</li>
+                                            <li><strong>Davlat qo'llab-quvvatlashi:</strong> 2020-2030 Moliya sohasi rivojlantirish strategiyasi</li>
+                                            <li><strong>Tashqi valyuta zaxirasi:</strong> $35+ Mlrd (2024), 7 oylik import</li>
+                                            <li><strong>Digital infrastructure:</strong> 85%+ internet penetration, 4G/5G tarmog'i</li>
+                                            <li><strong>Bank tizimi:</strong> 33 ta bank, kapital yetarliligi 20%+ (Basel III)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="swot-box weaknesses-box p-3">
+                                        <h5 class="text-danger"><i class="fas fa-minus-circle me-2"></i>Zaif Tomonlar (Weaknesses)</h5>
+                                        <ul class="mb-0">
+                                            <li><strong>Capital market immaturity:</strong> Stock exchange turnover past (GDP'ning 1% dan kam)</li>
+                                            <li><strong>Regulatory gaps:</strong> AML/KYC, corporate governance standartlari chala</li>
+                                            <li><strong>Human capital:</strong> CFA, ACCA certified professionals kam</li>
+                                            <li><strong>Valyuta konvertatsiya:</strong> To'liq erkin konvertatsiya yo'q</li>
+                                            <li><strong>Corruption perception:</strong> Transparency Int'l - 126/180 (2023)</li>
+                                            <li><strong>Limited FDI:</strong> Moliya sektoriga xorijiy investitsiya kam (~$2 Mlrd/yil)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="swot-box opportunities-box p-3">
+                                        <h5 class="text-primary"><i class="fas fa-lightbulb me-2"></i>Imkoniyatlar (Opportunities)</h5>
+                                        <ul class="mb-0">
+                                            <li><strong>Regional hub:</strong> Kazakhstan, Turkmaniston, Tojikiston, Qirg'iziston uchun gateway</li>
+                                            <li><strong>Islamic finance:</strong> $250 Mlrd+ Halal market (Markaziy Osiyo + Afg'oniston)</li>
+                                            <li><strong>Trade corridors:</strong> China-EU (Belt & Road), North-South (India-Russia)</li>
+                                            <li><strong>Commodity trading:</strong> Cotton, uranium, gold (world top producers)</li>
+                                            <li><strong>Fintech sandbox:</strong> 2023'dan ishlayapti - crypto, digital banking</li>
+                                            <li><strong>Diaspora capital:</strong> 5M+ o'zbek mehnat migrantlari ($20 Mlrd remittances)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="swot-box threats-box p-3">
+                                        <h5 class="text-warning"><i class="fas fa-exclamation-triangle me-2"></i>Tahdidlar (Threats)</h5>
+                                        <ul class="mb-0">
+                                            <li><strong>Geopolitical risks:</strong> Afg'oniston beqarorligi, Rossiya-Ukraina urushi</li>
+                                            <li><strong>Regional competition:</strong> Almaty (Kazakhstan) allaqachon kuchli</li>
+                                            <li><strong>Brain drain:</strong> Yuqori malakali kadrlar chet elga ketishi</li>
+                                            <li><strong>Inflation pressure:</strong> 2023 - 11.5%, 2024 - 9.2% (yuqori)</li>
+                                            <li><strong>International sanctions:</strong> Neighboring countries'ga ta'sir (Iran, Russia)</li>
+                                            <li><strong>Climate change:</strong> Suv tanqisligi, Orol dengizi muammosi</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-Year Roadmap -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-header bg-success text-white p-3">
+                            <h4 class="mb-0">
+                                <i class="fas fa-road me-2"></i>5 Yillik Strategik Roadmap (2025-2030)
+                            </h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline-roadmap">
+                                <div class="roadmap-phase phase-1 mb-4">
+                                    <div class="phase-header bg-primary text-white p-3 rounded-top">
+                                        <h5 class="mb-0"><i class="fas fa-flag-checkered me-2"></i>Phase 1: Foundations (2025-2026)</h5>
+                                    </div>
+                                    <div class="phase-content border border-primary rounded-bottom p-3">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6 class="text-primary">Qonunchilik</h6>
+                                                <ul class="small">
+                                                    <li>Capital Markets Law modernization (IOSCO principles)</li>
+                                                    <li>AML/CFT law strengthen (FATF 40 recommendations)</li>
+                                                    <li>Corporate Governance Code (OECD standards)</li>
+                                                    <li>Bankruptcy Law reform (creditor protection)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="text-primary">Institutlar</h6>
+                                                <ul class="small">
+                                                    <li>Unified Financial Regulator yaratish (Singapore MAS model)</li>
+                                                    <li>Tashkent International Financial Centre (TIFC) tashkil etish</li>
+                                                    <li>Credit Rating Agency (national)</li>
+                                                    <li>Fintech Association va Industry bodies</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="roadmap-phase phase-2 mb-4">
+                                    <div class="phase-header bg-warning text-dark p-3 rounded-top">
+                                        <h5 class="mb-0"><i class="fas fa-rocket me-2"></i>Phase 2: Market Development (2027-2028)</h5>
+                                    </div>
+                                    <div class="phase-content border border-warning rounded-bottom p-3">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6 class="text-warning">Capital Markets</h6>
+                                                <ul class="small">
+                                                    <li>Tashkent Stock Exchange (TSE) raqamlashtirish (blockchain-based trading)</li>
+                                                    <li>Government bond market chuqurlashtirish (yield curve yaratish)</li>
+                                                    <li>Corporate bond issuance rag'batlantirish (tax incentives)</li>
+                                                    <li>REITs (Real Estate Investment Trusts) joriy etish</li>
+                                                    <li>10+ major IPO (davlat korxonalari privatizatsiya)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="text-warning">Xalqaro Integratsiya</h6>
+                                                <ul class="small">
+                                                    <li>MSCI Emerging Markets index'ga kiritish arizasi</li>
+                                                    <li>Xorijiy banklarga litsenziya (minimum 3 ta global bank)</li>
+                                                    <li>Dual listing programs (LSE, Astana International Exchange)</li>
+                                                    <li>Correspondent banking relationships kengaytirish</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="roadmap-phase phase-3">
+                                    <div class="phase-header bg-success text-white p-3 rounded-top">
+                                        <h5 class="mb-0"><i class="fas fa-trophy me-2"></i>Phase 3: Regional Hub (2029-2030)</h5>
+                                    </div>
+                                    <div class="phase-content border border-success rounded-bottom p-3">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h6 class="text-success">Specialization</h6>
+                                                <ul class="small">
+                                                    <li><strong>Islamic Finance Hub:</strong> Sukuk issuance, Shariah-compliant products</li>
+                                                    <li><strong>Commodity Trading:</strong> Gold, cotton, uranium futures/options</li>
+                                                    <li><strong>SME Finance:</strong> Regional crowdfunding, invoice financing platform</li>
+                                                    <li><strong>Remittance Tech:</strong> Blockchain-based cross-border payments</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h6 class="text-success">Nishonga Olish</h6>
+                                                <ul class="small">
+                                                    <li>GFCI Top 50'ga kirish (hozir 110+ o'rinda emas)</li>
+                                                    <li>Stock market cap/GDP: 30%+ (hozir <5%)</li>
+                                                    <li>FDI moliya sektoriga: $10 Mlrd+ (hozir $2 Mlrd)</li>
+                                                    <li>Moliya sohasi GDP hissasi: 5%+ (hozir 2.8%)</li>
+                                                    <li>Bandlik: 150,000+ (hozir ~80,000)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Success Factors -->
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card border-0 shadow h-100 success-factor-card">
+                        <div class="card-body text-center">
+                            <div class="icon-box bg-primary text-white mb-3">
+                                <i class="fas fa-handshake fa-3x"></i>
+                            </div>
+                            <h5 class="card-title">1. Political Will</h5>
+                            <p class="card-text small">
+                                Prezident va Hukumat doimiy qo'llab-quvvatlashi. Singapore modeli - Lee Kuan Yew 40 yillik vizyon.
+                                <br><br>
+                                <strong>Action:</strong> Tashkent Financial Forum har yili (Davos modeli)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow h-100 success-factor-card">
+                        <div class="card-body text-center">
+                            <div class="icon-box bg-success text-white mb-3">
+                                <i class="fas fa-graduation-cap fa-3x"></i>
+                            </div>
+                            <h5 class="card-title">2. Human Capital</h5>
+                            <p class="card-text small">
+                                Kadrlar tayyorlash - CFA, ACCA, FRM certification'ni davlat grant bilan. Xorijdan tajribali kadrlarni jalb etish.
+                                <br><br>
+                                <strong>Action:</strong> TIFC Academy (training center), talent visa program
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card border-0 shadow h-100 success-factor-card">
+                        <div class="card-body text-center">
+                            <div class="icon-box bg-warning text-dark mb-3">
+                                <i class="fas fa-shield-alt fa-3x"></i>
+                            </div>
+                            <h5 class="card-title">3. Institutional Trust</h5>
+                            <p class="card-text small">
+                                Corruption index yaxshilash, property rights himoyasi, independent judiciary. Investorlar ishonchini qozonish.
+                                <br><br>
+                                <strong>Action:</strong> TIFC'da English law, international arbitration (DIFC modeli)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=13 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=15 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.swot-box {
+    background: white;
+    border-radius: 10px;
+    border: 2px solid;
+    height: 100%;
+}
+
+.strengths-box {
+    border-color: #28a745;
+}
+
+.weaknesses-box {
+    border-color: #dc3545;
+}
+
+.opportunities-box {
+    border-color: #007bff;
+}
+
+.threats-box {
+    border-color: #ffc107;
+}
+
+.swot-box h5 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+}
+
+.swot-box ul {
+    padding-left: 20px;
+}
+
+.swot-box ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.timeline-roadmap {
+    position: relative;
+}
+
+.roadmap-phase {
+    position: relative;
+}
+
+.phase-content ul {
+    margin-bottom: 0;
+}
+
+.success-factor-card {
+    transition: transform 0.3s ease;
+}
+
+.success-factor-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon-box {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+</style>
+{% endblock %}

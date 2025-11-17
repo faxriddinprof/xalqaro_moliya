@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Rivojlanish Bosqichlari{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-primary">5 Bosqichli Rivojlanish Modeli</h1>
+                <p class="lead text-muted">Emerging → Transformative Hub</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Bosqichlar diagrammasi -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <div class="stages-container">
+                        <div class="stage-item">
+                            <div class="stage-badge bg-secondary">1</div>
+                            <div class="stage-content">
+                                <h5>Emerging Hub</h5>
+                                <small>Boshlang'ich</small>
+                            </div>
+                        </div>
+                        <div class="stage-arrow"><i class="fas fa-arrow-right"></i></div>
+                        
+                        <div class="stage-item">
+                            <div class="stage-badge bg-info">2</div>
+                            <div class="stage-content">
+                                <h5>Growth Hub</h5>
+                                <small>O'sish</small>
+                            </div>
+                        </div>
+                        <div class="stage-arrow"><i class="fas fa-arrow-right"></i></div>
+                        
+                        <div class="stage-item">
+                            <div class="stage-badge bg-warning">3</div>
+                            <div class="stage-content">
+                                <h5>Regional Hub</h5>
+                                <small>Mintaqaviy</small>
+                            </div>
+                        </div>
+                        <div class="stage-arrow"><i class="fas fa-arrow-right"></i></div>
+                        
+                        <div class="stage-item">
+                            <div class="stage-badge bg-success">4</div>
+                            <div class="stage-content">
+                                <h5>Global Hub</h5>
+                                <small>Global</small>
+                            </div>
+                        </div>
+                        <div class="stage-arrow"><i class="fas fa-arrow-right"></i></div>
+                        
+                        <div class="stage-item">
+                            <div class="stage-badge bg-danger">5</div>
+                            <div class="stage-content">
+                                <h5>Transformative Hub</h5>
+                                <small>Innovatsion</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bosqichlar tahlili -->
+            <div class="row g-4">
+                <!-- Bosqich 1 -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-secondary text-white">
+                            <h5 class="mb-0"><i class="fas fa-seedling me-2"></i>Bosqich 1: Emerging Hub</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-muted mb-3">Xususiyatlari:</h6>
+                            <ul class="small mb-3">
+                                <li>Asosiy bank infratuzilmasi mavjud</li>
+                                <li>Mahalliy fond bozori rivojlanmoqda</li>
+                                <li>Xalqaro aloqalar cheklangan</li>
+                                <li>Qonunchilik bazasi shakllanmoqda</li>
+                            </ul>
+                            <h6 class="text-muted mb-2">KPI'lar:</h6>
+                            <div class="kpi-list">
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-chart-bar me-1"></i>Bozor kapitalizatsiyasi: $10-50 mlrd
+                                </span>
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-exchange-alt me-1"></i>FX hajmi: $5-20 mlrd/kun
+                                </span>
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-building me-1"></i>Xalqaro banklar: 5-15 ta
+                                </span>
+                            </div>
+                            <p class="mt-3 mb-0 small"><strong>Misol:</strong> Nairobi, Lagos, Jakarta (1990-lar)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bosqich 2 -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-info text-white">
+                            <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i>Bosqich 2: Growth Hub</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-muted mb-3">Xususiyatlari:</h6>
+                            <ul class="small mb-3">
+                                <li>Faol fond bozori va birjalar</li>
+                                <li>Mintaqaviy investorlarni jalb qilish</li>
+                                <li>Moliyaviy regulyatsiya yaxshilanmoqda</li>
+                                <li>Texnologik infratuzilma rivojlanmoqda</li>
+                            </ul>
+                            <h6 class="text-muted mb-2">KPI'lar:</h6>
+                            <div class="kpi-list">
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-chart-bar me-1"></i>Bozor kapitalizatsiyasi: $50-200 mlrd
+                                </span>
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-exchange-alt me-1"></i>FX hajmi: $20-100 mlrd/kun
+                                </span>
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-rocket me-1"></i>Fintech startaplar: 50-200 ta
+                                </span>
+                            </div>
+                            <p class="mt-3 mb-0 small"><strong>Misol:</strong> Shanghai (2000-lar), Dubai (2005-2010)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bosqich 3 -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <h5 class="mb-0"><i class="fas fa-map-marked-alt me-2"></i>Bosqich 3: Regional Hub</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-muted mb-3">Xususiyatlari:</h6>
+                            <ul class="small mb-3">
+                                <li>Mintaqada yetakchi moliya markazi</li>
+                                <li>Xalqaro litsenziyalar va standartlar</li>
+                                <li>Kuchli yuridik tizim</li>
+                                <li>Ko'p xilma-xil moliyaviy instrumentlar</li>
+                            </ul>
+                            <h6 class="text-muted mb-2">KPI'lar:</h6>
+                            <div class="kpi-list">
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-chart-bar me-1"></i>Bozor kapitalizatsiyasi: $200-800 mlrd
+                                </span>
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-exchange-alt me-1"></i>FX hajmi: $100-400 mlrd/kun
+                                </span>
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-certificate me-1"></i>GFCI reytingi: 600-700 ball
+                                </span>
+                            </div>
+                            <p class="mt-3 mb-0 small"><strong>Misol:</strong> Singapore, Hong Kong, Tokyo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bosqich 4 -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-header bg-success text-white">
+                            <h5 class="mb-0"><i class="fas fa-globe me-2"></i>Bosqich 4: Global Hub</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="text-muted mb-3">Xususiyatlari:</h6>
+                            <ul class="small mb-3">
+                                <li>Global moliyaviy operatsiyalar markazi</li>
+                                <li>Dunyoning yirik banklari va fondlari</li>
+                                <li>24/7 savdo platformalari</li>
+                                <li>Xalqaro arbitraj va sudlov markazlari</li>
+                            </ul>
+                            <h6 class="text-muted mb-2">KPI'lar:</h6>
+                            <div class="kpi-list">
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-chart-bar me-1"></i>Bozor kapitalizatsiyasi: $800+ mlrd
+                                </span>
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-exchange-alt me-1"></i>FX hajmi: $400+ mlrd/kun
+                                </span>
+                                <span class="badge bg-light text-dark mb-2 me-1">
+                                    <i class="fas fa-certificate me-1"></i>GFCI reytingi: 700-750 ball
+                                </span>
+                            </div>
+                            <p class="mt-3 mb-0 small"><strong>Misol:</strong> London, New York, Zürich</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=3 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=5 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.stages-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.stage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stage-badge {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.stage-content h5 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.stage-content small {
+    font-size: 11px;
+    color: #6c757d;
+}
+
+.stage-arrow {
+    font-size: 24px;
+    color: #667eea;
+    margin: 0 10px;
+}
+
+.kpi-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.card-header {
+    border-bottom: 3px solid rgba(255,255,255,0.3);
+}
+
+@media (max-width: 768px) {
+    .stage-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+    
+    .stages-container {
+        flex-direction: column;
+    }
+}
+</style>
+{% endblock %}

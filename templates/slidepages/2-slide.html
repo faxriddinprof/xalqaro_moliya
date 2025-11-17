@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd {{ current_slide }} - Moliya Markazlari Tushunchasi{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-3 fw-bold text-primary">Moliya Markazlari Tushunchasi</h1>
+                <p class="lead text-muted">Ta'rif, Xususiyatlar va Global Ahamiyat</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Ta'rif -->
+            <div class="row mb-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card border-primary shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title text-primary mb-3">
+                                <i class="fas fa-quote-left me-2"></i>Ta'rif
+                            </h4>
+                            <p class="lead mb-0">
+                                <strong>Moliya markazi</strong> — bu xalqaro moliyaviy xizmatlar, bank operatsiyalari, 
+                                fond bozorlari, sug'urta, investitsiya boshqaruvi va professional moliyaviy xizmatlar 
+                                markazlashgan shahar yoki mintaqa bo'lib, u global kapital oqimlarining asosiy 
+                                yo'naltirgich nuqtasi hisoblanadi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Asosiy xususiyatlar -->
+            <div class="row mb-4">
+                <div class="col-lg-12">
+                    <h3 class="mb-4 text-center">
+                        <i class="fas fa-star text-warning me-2"></i>Asosiy Xususiyatlar
+                    </h3>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-light h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-building fa-3x text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title">Institutsional Infratuzilma</h5>
+                                    <p class="card-text small">
+                                        Yirik banklarning markaziy idoralari, fond birjalari, sug'urta kompaniyalari, 
+                                        investitsiya fondlari va boshqa moliyaviy institutlar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-light h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-balance-scale fa-3x text-success"></i>
+                                    </div>
+                                    <h5 class="card-title">Yuridik Muhit</h5>
+                                    <p class="card-text small">
+                                        Zamonaviy qonunchilik bazasi, property huquqlarining himoyasi, 
+                                        shaffoflik, sud tizimining mustaqilligi va xalqaro standartlarga mosligi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-light h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-users fa-3x text-info"></i>
+                                    </div>
+                                    <h5 class="card-title">Malakali Kadrlar</h5>
+                                    <p class="card-text small">
+                                        Yuqori malakali moliyaviy mutaxassislar, analistlar, yuristlar, 
+                                        auditorlar va xalqaro tajribaga ega professional kadrlar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-light h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-network-wired fa-3x text-warning"></i>
+                                    </div>
+                                    <h5 class="card-title">Texnologik Infratuzilma</h5>
+                                    <p class="card-text small">
+                                        Zamonaviy IT tizimlar, tezkor internet, blockchain texnologiyalari, 
+                                        AI va kiberxavfsizlik tizimlari.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-light h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-globe fa-3x text-danger"></i>
+                                    </div>
+                                    <h5 class="card-title">Xalqaro Integratsiya</h5>
+                                    <p class="card-text small">
+                                        Global bozorlar bilan yaqin aloqalar, vaqt zonasi afzalliklari, 
+                                        ko'p tilli muhit va xalqaro standartlarga rioya.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 bg-light h-100">
+                                <div class="card-body text-center">
+                                    <div class="mb-3">
+                                        <i class="fas fa-chart-line fa-3x text-secondary"></i>
+                                    </div>
+                                    <h5 class="card-title">Bozor Likvidligi</h5>
+                                    <p class="card-text small">
+                                        Yuqori savdo hajmlari, diversifikatsiyalangan moliyaviy instrumentlar, 
+                                        past tranzaksiya xarajatlari va tezkor ijro.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global ahamiyati -->
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="alert alert-success border-0 shadow-sm">
+                        <h4 class="alert-heading mb-3">
+                            <i class="fas fa-world me-2"></i>Global Iqtisodiyotdagi Ahamiyati
+                        </h4>
+                        <ul class="mb-0">
+                            <li class="mb-2"><strong>Kapital oqimlarini boshqarish:</strong> Global investitsiyalar va kapital harakatini yo'naltirish</li>
+                            <li class="mb-2"><strong>Iqtisodiy o'sishni qo'llab-quvvatlash:</strong> Korxonalar va davlatlar uchun moliyalash manbai</li>
+                            <li class="mb-2"><strong>Risk boshqaruvi:</strong> Xavflarni taqsimlash va sug'urtalash imkoniyatlari</li>
+                            <li class="mb-2"><strong>Innovatsiyalar markazi:</strong> Fintech va yangi moliyaviy texnologiyalarning rivojlanish o'chog'i</li>
+                            <li class="mb-0"><strong>Ish o'rinlari yaratish:</strong> Yuqori malakali mutaxassislar uchun katta ish bozori</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'slide' slide_number=1 %}" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Orqaga
+        </a>
+        
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+        
+        <a href="{% url 'slide' slide_number=3 %}" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+</style>
+{% endblock %}

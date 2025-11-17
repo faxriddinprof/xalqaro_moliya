@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Fariddin Baxtiyorov - Resume{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+    <div class="row">
+        <!-- Profile Section -->
+        <div class="col-lg-4 mb-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-body text-center">
+                    <img src="{% static 'img/profile.jpg' %}" alt="Fariddin Baxtiyorov" 
+                         class="rounded-circle mb-3 profile-img">
+                    <h3 class="card-title mb-2">Fariddin Baxtiyorov</h3>
+                    <p class="text-muted mb-3">Junior Python Developer</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <a href="https://github.com/faxriddinprof" target="_blank" class="btn btn-outline-dark btn-sm" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/faxriddin-baxtiyorov-718055292/" target="_blank" class="btn btn-outline-primary btn-sm" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://t.me/faxriddinbaxtiyorov" target="_blank" class="btn btn-outline-info btn-sm" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_faxriddin.b" target="_blank" class="btn btn-outline-danger btn-sm" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-lg-8">
+            <!-- Education Section -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">
+                        <i class="fas fa-graduation-cap text-primary me-2"></i>
+                        Education
+                    </h4>
+                    <div class="mb-0">
+                        <h5 class="mb-2">Tashkent State University of Economics</h5>
+                        <p class="text-muted mb-1">
+                            <i class="fas fa-calendar-alt me-2"></i>
+                            2022 - Present
+                        </p>
+                        <p class="mb-0">
+                            <strong>Bachelor's Degree</strong> | Finance and Financial Technologies
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">
+                        <i class="fas fa-briefcase text-success me-2"></i>
+                        Experiences
+                    </h4>
+                    <div class="mb-0">
+                        <h5 class="mb-2">Junior Python Developer</h5>
+                        <p class="text-muted mb-2">
+                            <i class="fas fa-calendar-alt me-2"></i>
+                            2024 - Present
+                        </p>
+                        <ul class="list-unstyled ms-3">
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Telegram botlar</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Web saytlar</li>
+                            <li><i class="fas fa-check-circle text-success me-2"></i>Restfull API integratsions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">
+                        <i class="fas fa-code text-warning me-2"></i>
+                        Skills
+                    </h4>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <span class="badge bg-primary mb-2 me-2 p-2">
+                                <i class="fab fa-python me-1"></i> Python
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-success mb-2 me-2 p-2">
+                                <i class="fas fa-code me-1"></i> Django & Django REST
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-danger mb-2 me-2 p-2">
+                                <i class="fab fa-html5 me-1"></i> HTML/CSS/JavaScript
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-dark mb-2 me-2 p-2">
+                                <i class="fab fa-github me-1"></i> Git & GitHub
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-info mb-2 me-2 p-2">
+                                <i class="fas fa-mobile-alt me-1"></i> Responsive Design
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="badge bg-secondary mb-2 me-2 p-2">
+                                <i class="fas fa-database me-1"></i> PostgreSQL / SQLite
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Course Project Section -->
+            <div class="card shadow-sm border-0 bg-gradient-primary text-white">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">
+                        <i class="fas fa-book-open me-2"></i>
+                        Mustaqil ish Loyihasi
+                    </h4>
+                    <div class="mb-3">
+                        <p class="mb-1"><strong>Fan:</strong> Xalqaro moliya</p>
+                        <p class="mb-0"><strong>Mavzu:</strong> Jahon moliya markazlari rivojlanish bosqichlari</p>
+                    </div>
+                    <div class="d-grid">
+                        <a href="{% url 'slide' slide_number=1 %}" class="btn btn-light btn-lg">
+                            <i class="fas fa-play-circle me-2"></i>
+                            Prezentatsiyani boshlash
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+</style>
+{% endblock %}
