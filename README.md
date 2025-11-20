@@ -74,7 +74,7 @@ xalqaro_moliya/
 - ... `/slide/15/` gacha
 
 ## Ishlab chiquvchi
-**Fariddin Baxtiyorov**
+**Faxriddin Baxtiyorov**
 - Tashkent State University of Economics
 - Junior Python Developer
 
