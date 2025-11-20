@@ -55,7 +55,7 @@ xalqaro_moliya/
 │   ├── navbar.html        # Navbar
 │   ├── footer.html        # Footer
 │   ├── resume.html        # Resume sahifasi
-│   └── slidepages/        # Slayd sahifalari
+│   └── international_finance/        # Xalqaro moliya slides sahifalari
 │       ├── 1-slide.html
 │       ├── 2-slide.html
 │       └── ... (15 tagacha)

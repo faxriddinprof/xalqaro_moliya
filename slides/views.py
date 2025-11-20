@@ -17,7 +17,7 @@ class SlideView(TemplateView):
 
         # 1 dan 15 gacha bo'lgan slaydlar
         if 1 <= slide_number <= 15:
-            return [f"slidepages/{slide_number}-slide.html"]
+            return [f"international_finance/{slide_number}-slide.html"]
         else:
             raise Http404("Bunday slayd mavjud emas")
 
