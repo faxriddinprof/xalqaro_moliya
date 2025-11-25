@@ -1,0 +1,13 @@
+{
+  "scenarios": [
+    { "label": "Base", "value": 1350000 },
+    { "label": "-10% FX", "value": 1215000 },
+    { "label": "+10% FX", "value": 1485000 },
+    { "label": "+25% FX", "value": 1687500 }
+  ],
+  "hedge": {
+    "hedged": 55,
+    "open": 30,
+    "other": 15
+  }
+}

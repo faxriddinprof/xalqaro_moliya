@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 12{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+                <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Valyuta kursining yillar kesimida o'zgarishi va makroiqtisodiy ta'siri</h1>
+                <h2 class="h6 text-muted">O'zbekiston iqtisodiyotiga valyuta riski tahlili</h2>
+            </div>
+
+            <div class="chart-container">
+                <!-- Line chart: USD/UZS historical rates -->
+                <div class="line-chart" aria-hidden="false">
+                    <div class="chart-label mb-3">USD/UZS kursi (yillar kesimida, namunaviy ma'lumotlar)</div>
+
+                    <canvas id="usdUzsChart" style="max-height:400px; width:100%;"></canvas>
+
+                    <div class="mt-4">
+                        <h5 class="fw-bold">Tahlil</h5>
+                        <p class="text-muted">2015 yildan 2025 yilgacha so'm dollaraga nisbatan taxminan 2 800 so'mdan 11 900 so'mga oshdi. Eng keskin o'zgarish 2017 yilgi valyuta liberallashuvi davrida yuz berdi. Kursning oshishi import narxlarini ko'tarib, inflyatsiyani kuchaytirdi va aholi xarid qobiliyatini pasaytirdi.</p>
+
+                        <p class="text-muted">Biroq, bu jarayon mahalliy ishlab chiqaruvchilar uchun imkoniyat yaratdi — import qimmatlagani sababli ichki ishlab chiqarish raqobatbardosh bo'ldi. Shuningdek, eksportchilar uchun tushum oshdi va bu savdo balansini qisman yaxshiladi.</p>
+
+                        <p class="text-muted">Boshqa tomondan, valyuta kursi o'sishi tashqi qarzlarni xizmat qilish xarajatini ko'paytirib, kredit bozoriga bosim o'tkazdi.</p>
+
+                        <p class="text-muted">Umuman olganda, dollar kursining ko'tarilishi qisqa muddatda inflyatsiya va narxlarni oshirdi, ammo uzoq muddatda eksport va mahalliy ishlab chiqarishni rag'batlantiruvchi omil bo'ldi.</p>
+
+                        <h5 class="fw-bold">Makroiqtisodiy ta'siri</h5>
+                        <ul class="text-muted">
+                            <li><strong>Inflyatsiya:</strong> Import narxlarining oshishi iste'mol narxlarini ko'taradi, ayniqsa oziq-ovqat va energiya uchun.</li>
+                            <li><strong>GDP o'sishi:</strong> Eksport raqobatdoshligi pasayadi, lekin import o'rnini bosuvchi mahsulotlar ishlab chiqarish oshadi.</li>
+                            <li><strong>Tashqi qarz:</strong> Dollar qarzlarning UZS ekvivalenti oshadi, budjetga qo'shimcha yuk.</li>
+                            <li><strong>Iste'mol va investitsiyalar:</strong> Ishonch pasayishi sababli iste'mol kamayadi, investitsiyalar to'xtaydi.</li>
+                        </ul>
+
+                        <h5 class="fw-bold">Risk tahlili</h5>
+                        <p class="text-muted">Valyuta riski — bu kurs o'zgarishlaridan kelib chiqadigan yo'qotishlar. O'zbekiston kabi importga bog'liq iqtisodiyotda devalvatsiya ijobiy (eksport oshadi) va salbiy (inflyatsiya) ta'sir ko'rsatadi. Hedjlash vositalari (futures, opsionlar) va diversifikatsiya kerak.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+            <script>
+                Chart.register(ChartDataLabels);
+
+                function loadUsdUzsChart(){
+                    // Sample historical data (hardcoded examples)
+                    const data = {
+                        labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [{
+                            label: 'USD/UZS kursi',
+                            data: [2800, 3000, 8100, 10400, 10600, 10000, 10700, 11200, 11500, 12000, 11936.89], // actual approximate rates
+                            borderColor: '#6a7cf1',
+                            backgroundColor: 'rgba(106, 124, 241, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    };
+
+                    const ctx = document.getElementById('usdUzsChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: data,
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: { display: true },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            return 'Kurs: ' + context.parsed.y + ' UZS/USD';
+                                        }
+                                    }
+                                },
+                                datalabels: {
+                                    anchor: 'end',
+                                    align: 'top',
+                                    formatter: (value) => value,
+                                    color: '#000',
+                                    font: { size: 12, weight: 'bold' }
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: false,
+                                    title: { display: true, text: 'UZS per USD' }
+                                },
+                                x: {
+                                    title: { display: true, text: 'Yil' }
+                                }
+                            }
+                        }
+                    });
+                }
+                loadUsdUzsChart();
+            </script>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 8{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Valyuta riski</h1>
+                <h2 class="h6 text-muted">Slayd {{ current_slide }}</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="fw-bold">Misol:</h3>
+
+                    <p><strong>Kompaniya:</strong> Germaniyada joylashgan avtomobil ishlab chiqaruvchi.</p>
+                    <p><strong>Bozor:</strong> Kompaniya mahsulotlarini AQShda sotadi.</p>
+
+                    <p><strong>Narxlar:</strong></p>
+                    <ul class="mb-2">
+                        <li>Har bir avtomobil AQShda <strong>$50,000</strong> ga sotiladi.</li>
+                        <li>Har bir avtomobilning tannarxi Germaniyada <strong>€36,000</strong>.</li>
+                        <li>Sotilgan avtomobillar: <strong>30 ta</strong>.</li>
+                    </ul>
+
+                    <p><strong>Holat:</strong> Dollar uzoq muddatda qadrsizlanib borsa (masalan, 1 $ = 0.9 € dan 1 $ = 0.6 € ga tushsa), bu kompaniyaning strategiyasiga ta'sir qiladi.</p>
+
+                    <p><strong>Har bir avtomobil sotishdan daromad yevroda:</strong></p>
+                    <p class="fs-5 fw-semibold text-dark ms-4">50,000 $ × 0.6 = <strong>30,000 €</strong></p>
+
+                    <p><strong>Tannarx:</strong> <strong>€36,000</strong>, ya'ni har bir avtomobil uchun zarar:</p>
+                    <p class="fs-5 fw-semibold text-dark ms-4">30,000 − 36,000 = <strong>−6,000 €</strong></p>
+
+                    <p><strong>30 ta avtomobil uchun jami zarar:</strong></p>
+                    <p class="fs-5 fw-semibold text-dark ms-4">−6,000 × 30 = <strong>−180,000 €</strong></p>
+
+                    <div class="mt-4 p-3 recommendation-box">
+                        <p class="mb-0"><strong>Natija:</strong> Bu holat kompaniyaning uzoq muddatli strategiyasiga ta'sir qiladi: kompaniya AQSh bozoridan chiqishga majbur bo'lishi mumkin; mahsulot narxini oshirish raqobatbardoshlikni pasaytiradi. Bu kompaniyaning <strong>iqtisodiy valyuta riski</strong>, chunki uzoq muddatda xalqaro bozor strategiyasiga ta'sir qiladi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

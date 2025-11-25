@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 7{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Valyuta riski</h1>
+                <h2 class="h6 text-muted">Slayd {{ current_slide }}</h2>
+            </div>
+
+            <div class="row align-items-start">
+                <div class="col-lg-2 d-none d-lg-block">
+                    <div class="d-flex flex-column align-items-start gap-3">
+                        <div class="number-badge bg-light text-dark">1</div>
+                        <div class="number-badge bg-light text-dark">2</div>
+                        <div class="number-badge bg-light text-dark">3</div>
+                        <div class="number-badge bg-light text-dark">4</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-10">
+                    <p class="lead fw-semibold mb-4">Iqtisodiy valyuta riski — bu valyuta kursining o'zgarishi natijasida korxonaning uzoq muddatli raqobatbardoshligi, savdo hajmi, daromadlari yoki xarajatlariga ta'sir qiluvchi xavf. Quyida ushbu riskni tushuntirib beruvchi asosiy sabablar keltirilgan:</p>
+
+                    <div class="mb-4">
+                        <h4 class="h5 fw-bold">Raqobat muhitining o'zgarishi</h4>
+                        <p class="text-muted">Bir xil turdagi tovarlarni ishlab chiqaruvchilar o'rtasida raqobatlashuvning o'zgarishi</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="h5 fw-bold">Iste'molchi talabining o'zgarishi</h4>
+                        <p class="text-muted">Muayyan tovar belgilari iste'molchilari ehtiyojining o'zgarishi</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="h5 fw-bold">Xalqaro savdo shartlarining o'zgarishi</h4>
+                        <p class="text-muted">Mamlakatlar o'rtasida tovar almashishda valyutalar kursining o'zgarishi ta'siri</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="h5 fw-bold">Kompaniya iqtisodiy holatining o'zgarishi</h4>
+                        <p class="text-muted">Almashinuv kursi o'zgarishining kompaniya moliyaviy ko'rsatkichlariga ta'siri</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

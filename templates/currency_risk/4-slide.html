@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 4{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-3 mb-3 fw-bold gradient-text">Operatsion valyuta riski</h1>
+            </div>
+
+            <div class="row align-items-start">
+                <div class="col-lg-3 d-flex flex-column align-items-center number-column">
+                    <div class="mb-4 text-center">
+                        <div class="number-badge variant-1">1</div>
+                    </div>
+                    <div class="mb-4 text-center">
+                        <div class="number-badge variant-2">2</div>
+                    </div>
+                    <div class="mb-4 text-center">
+                        <div class="number-badge variant-3">3</div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9">
+                    <div class="mb-4">
+                        <h4 class="mb-2">Ta'rifi</h4>
+                        <p class="lead mb-0">Savdo operatsiyalari va moliyaviy shartnomalar bilan bog'liq risk.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="mb-2">Ta'siri</h4>
+                        <p class="lead mb-0">Foyda darajasiga bevosita salbiy ta'sir ko'rsatadi.</p>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="mb-2">Kamaytirish</h4>
+                        <p class="lead mb-0">Narx siyosati va to'lov muddatlarini muvofiqlashtirish orqali kamaytiriladi.</p>
+                    </div>
+
+                    <hr class="my-3">
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <h5 class="mb-2">Amaliy misollar</h5>
+                            <ul class="mb-0">
+                                <li class="mb-2">Eksportyor kompaniya 30 kun ichida valyuta qabul qiladi — kurs pasayishi daromadni kamaytiradi.</li>
+                                <li class="mb-2">Importyor oldindan shartnoma asosida to'lov qilsa, kurs oshishi xarajatni oshiradi.</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h5 class="mb-2">Hedjlash (kamaytirish) instrumentlari</h5>
+                            <ul class="mb-0">
+                                <li class="mb-2"><strong>Forward kontraktlar</strong> — kelajakdagi kursni mahkamlash uchun ishlatiladi.</li>
+                                <li class="mb-2"><strong>Valyuta opsionlari</strong> — downside (zarar)ni cheklash bilan upside (foyda)ni saqlashga yordam beradi.</li>
+                                <li class="mb-2"><strong>Natija bilan bog'liq kelishuvlar</strong> — narx va muddatni muvofiqlashtirish orqali operatsion riskni kamaytiradi.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

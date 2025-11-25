@@ -1,0 +1,28 @@
+{% load static %}
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+
+        <span class="badge bg-dark px-3 py-2">{{ current_slide }} / {{ total_slides }}</span>
+
+        {% if previous_slide %}
+            <a href="{% url base_url_name slide_number=previous_slide %}" class="btn btn-outline-primary">
+                <i class="fas fa-arrow-left me-2"></i> Oldingi
+            </a>
+        {% else %}
+            <button class="btn btn-outline-secondary" disabled>
+                <i class="fas fa-arrow-left me-2"></i> Oldingi
+            </button>
+        {% endif %}
+
+        {% if next_slide %}
+            <a href="{% url base_url_name slide_number=next_slide %}" class="btn btn-primary">
+                Keyingi <i class="fas fa-arrow-right ms-2"></i>
+            </a>
+        {% else %}
+            <button class="btn btn-outline-secondary" disabled>Keyingi</button>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 14{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Valyuta riski bo'yicha ta'lim videolari</h1>
+                <h2 class="h6 text-muted">YouTube dan foydali kontent</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="video-section mb-5">
+                        <h5 class="fw-bold">Video 1</h5>
+                        <div class="ratio ratio-16x9 mb-2">
+                            <iframe src="https://www.youtube.com/embed/kG-yrUT4vuc" title="Video 1" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-muted small">Agar video ko'rinmasa, YouTube da oching: <a href="https://youtu.be/kG-yrUT4vuc?si=JG_OyNGe5U8E5n3Y" target="_blank">https://youtu.be/kG-yrUT4vuc?si=JG_OyNGe5U8E5n3Y</a></p>
+                    </div>
+
+                    <div class="video-section mb-5">
+                        <h5 class="fw-bold">Video 2</h5>
+                        <div class="ratio ratio-16x9 mb-2">
+                            <iframe src="https://www.youtube.com/embed/kO9mqnGbcW8" title="Video 2" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-muted small">Agar video ko'rinmasa, YouTube da oching: <a href="https://youtu.be/kO9mqnGbcW8?si=iqXbJh442k2Aj7Wm" target="_blank">https://youtu.be/kO9mqnGbcW8?si=iqXbJh442k2Aj7Wm</a></p>
+                    </div>
+
+                    <div class="video-section mb-5">
+                        <h5 class="fw-bold">Video 3</h5>
+                        <div class="ratio ratio-16x9 mb-2">
+                            <iframe src="https://www.youtube.com/embed/2z6efhDRueo" title="Video 3" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <p class="text-muted small">Agar video ko'rinmasa, YouTube da oching: <a href="https://youtu.be/2z6efhDRueo?si=6ZOUZTf34at59auK" target="_blank">https://youtu.be/2z6efhDRueo?si=6ZOUZTf34at59auK</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

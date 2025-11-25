@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 13{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Inflyatsiya va valyuta kursining bog'liqligi — ikki o'qli grafik</h1>
+                <h2 class="h6 text-muted">Yillar kesimida tahlil</h2>
+            </div>
+
+            <div class="chart-container">
+                <!-- Dual-axis line chart: USD rate and inflation -->
+                <div class="line-chart" aria-hidden="false">
+                    <div class="chart-label mb-3">USD kursi va inflyatsiya foizi (yillar kesimida)</div>
+
+                    <canvas id="dualAxisChart" style="max-height:400px; width:100%;"></canvas>
+
+                    <div class="mt-4">
+                        <h5 class="fw-bold">Tahlil</h5>
+                        <p class="text-muted">Grafikda USD/UZS kursi va inflyatsiya foizining 2015-2025 yillardagi bog'liqligi ko'rsatilgan. Kurs o'sishi ko'pincha inflyatsiyani kuchaytiradi, chunki import narxlari oshadi. Masalan, 2017-yilda kurs keskin o'sganda inflyatsiya ham yuqori bo'lgan (13.9%). Biroq, barcha holatlarda to'g'ridan-to'g'ri bog'liqlik yo'q — boshqa omillar (monetar siyosat, global narxlar) ham ta'sir qiladi.</p>
+
+                        <h5 class="fw-bold">Makroiqtisodiy bog'liqlik</h5>
+                        <ul class="text-muted">
+                            <li><strong>Kurs o'sishi va inflyatsiya:</strong> Import qimmatlash narxlarni ko'taradi, ayniqsa oziq-ovqat va energiya uchun.</li>
+                            <li><strong>Monetar javob:</strong> Markaziy bank inflyatsiyani nazorat qilish uchun foiz stavkalarini oshirishi mumkin.</li>
+                            <li><strong>Uzoq muddat:</strong> Kurs barqarorligi inflyatsiya prognozini yaxshilaydi va investitsiyalarni jalb qiladi.</li>
+                            <li><strong>Risk:</strong> Kurs tebranishlari inflyatsiya volatilitatini oshiradi, bu iqtisodiy barqarorlikka tahdid.</li>
+                        </ul>
+
+                        <h5 class="fw-bold">Tavsiyalar</h5>
+                        <p class="text-muted">Valyuta kursi va inflyatsiya o'rtasidagi bog'liqlikni monitoring qilish kerak. Hedjlash va diversifikatsiya orqali risklarni kamaytirish mumkin. Davlat siyosati kurs barqarorligini ta'minlashga qaratilgan bo'lishi lozim.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+            <script>
+                Chart.register(ChartDataLabels);
+
+                function loadDualAxisChart(){
+                    // Data from provided table
+                    const labels = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+                    const usdRates = [2800, 3000, 8100, 10400, 10600, 10000, 10700, 11200, 11500, 12000, 11936.89];
+                    const inflation = [8.5, 7.9, 13.9, 14.3, 15.2, 11.1, 10.9, 12.3, 9.7, 10.6, 9.9];
+
+                    const data = {
+                        labels: labels,
+                        datasets: [{
+                            label: 'USD kursi (UZS)',
+                            data: usdRates,
+                            borderColor: '#6a7cf1',
+                            backgroundColor: 'rgba(106, 124, 241, 0.1)',
+                            yAxisID: 'y',
+                            tension: 0.4
+                        }, {
+                            label: 'Inflyatsiya (%)',
+                            data: inflation,
+                            borderColor: '#f6b85c',
+                            backgroundColor: 'rgba(246, 184, 92, 0.1)',
+                            yAxisID: 'y1',
+                            tension: 0.4
+                        }]
+                    };
+
+                    const ctx = document.getElementById('dualAxisChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: data,
+                        options: {
+                            responsive: true,
+                            plugins: {
+                                legend: { display: true },
+                                tooltip: {
+                                    callbacks: {
+                                        label: function(context) {
+                                            let label = context.dataset.label || '';
+                                            if (label) {
+                                                label += ': ';
+                                            }
+                                            label += context.parsed.y;
+                                            if (context.datasetIndex === 0) {
+                                                label += ' UZS';
+                                            } else {
+                                                label += '%';
+                                            }
+                                            return label;
+                                        }
+                                    }
+                                },
+                                datalabels: {
+                                    display: true,
+                                    anchor: 'end',
+                                    align: 'top',
+                                    formatter: (value, context) => {
+                                        if (context.datasetIndex === 0) {
+                                            return value + ' UZS';
+                                        } else {
+                                            return value + '%';
+                                        }
+                                    },
+                                    color: '#000',
+                                    font: { size: 10, weight: 'bold' },
+                                    offset: 4
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    type: 'linear',
+                                    position: 'left',
+                                    title: { display: true, text: 'USD kursi (UZS)' },
+                                    beginAtZero: false
+                                },
+                                y1: {
+                                    type: 'linear',
+                                    position: 'right',
+                                    title: { display: true, text: 'Inflyatsiya (%)' },
+                                    beginAtZero: false,
+                                    grid: { drawOnChartArea: false }
+                                },
+                                x: {
+                                    title: { display: true, text: 'Yil' }
+                                }
+                            }
+                        }
+                    });
+                }
+                loadDualAxisChart();
+            </script>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

@@ -34,3 +34,30 @@ class SlideView(TemplateView):
         context["next_slide"] = slide_number + 1 if slide_number < 15 else None
 
         return context
+
+
+class CurrencySlideView(TemplateView):
+    """Valyuta riski (currency_risk) slayd sahifalari uchun view"""
+
+    def get_template_names(self):
+        slide_number = self.kwargs.get("slide_number", 1)
+
+        # 1 dan 15 gacha bo'lgan slaydlar
+        if 1 <= slide_number <= 15:
+            return [f"currency_risk/{slide_number}-slide.html"]
+        else:
+            raise Http404("Bunday slayd mavjud emas")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        slide_number = self.kwargs.get("slide_number", 1)
+
+        # Navigatsiya uchun ma'lumotlar
+        context["current_slide"] = slide_number
+        context["total_slides"] = 15
+        context["has_previous"] = slide_number > 1
+        context["has_next"] = slide_number < 15
+        context["previous_slide"] = slide_number - 1 if slide_number > 1 else None
+        context["next_slide"] = slide_number + 1 if slide_number < 15 else None
+
+        return context
