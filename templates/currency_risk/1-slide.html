@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 1{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-3 mb-3 fw-bold gradient-text">VALYUTA RISKI</h1>
+                <h2 class="h3 text-muted mb-4">Reja:</h2>
+            </div>
+
+            <hr class="my-3">
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <ol class="lead" style="font-size:1.4rem; line-height:1.6;">
+                        <li class="mb-3">Valyuta riskining iqtisodiy mohiyati, turlari va yuzaga kelish sabablari.</li>
+                        <li class="mb-3">Valyuta ayirboshlash jarayonidagi yo'qotishlar.</li>
+                        <li class="mb-3">Vaqt bo'yicha valyuta kurslari.</li>
+                        <li class="mb-3">Valyuta risklarini kamaytirish.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

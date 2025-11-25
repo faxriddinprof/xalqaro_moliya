@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 2{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-3 mb-3 fw-bold gradient-text">Valyuta riski</h1>
+                <h2 class="h4 text-muted mb-4">1. Valyuta riskining iqtisodiy mohiyati, turlari va yuzaga kelish sabablari</h2>
+            </div>
+
+            <hr class="my-3">
+
+            <div class="row g-4">
+                <div class="col-lg-10 mx-auto">
+                    <div class="mb-4 d-flex align-items-start gap-3">
+                        <div class="badge bg-success rounded-circle p-3 shadow-sm">
+                            <i class="fas fa-exchange-alt fa-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2">Valyuta riski</h4>
+                            <p class="mb-0 lead">Valyuta riski - bu xorijiy valyuta kursining o'zgarishidan kelib chiqadigan moliyaviy yo'qotishlar yoki foyda.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex align-items-start gap-3">
+                        <div class="badge bg-info rounded-circle p-3 shadow-sm">
+                            <i class="fas fa-chart-line fa-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2">Kurs o'zgarishlari</h4>
+                            <p class="mb-0 lead">Xorijiy valyuta kurslari doimiy o'zgarib turadi. Bu esa mahsulotlarni qanday narxlashga, to'lovlarni amalga oshirishga va boshqa moliyaviy masalalarga ta'sir qiladi.</p>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 d-flex align-items-start gap-3">
+                        <div class="badge bg-warning rounded-circle p-3 shadow-sm">
+                            <i class="fas fa-coins fa-lg"></i>
+                        </div>
+                        <div>
+                            <h4 class="mb-2">Moliyaviy yo'qotishlar</h4>
+                            <p class="mb-0 lead">Valyuta kursi o'zgarishlaridan kelib chiqadigan moliyaviy yo'qotishlar korxona faoliyatiga jiddiy zarar yetkazishi mumkin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

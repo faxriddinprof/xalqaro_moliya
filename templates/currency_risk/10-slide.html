@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 10{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Valyuta riski</h1>
+                <h2 class="h6 text-muted">Slayd {{ current_slide }}</h2>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-12">
+                    <h1 class="display-6 fw-bold text-center">Valyuta riskining export va importga ta'siri</h1>
+                </div>
+            </div>
+
+            <div class="row gy-4">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <div class="number-badge bg-light text-dark">1</div>
+                        </div>
+                        <div>
+                            <h4 class="h5 fw-bold">Xalqaro mehnat taqsimotiga ta'sir</h4>
+                            <p class="text-muted">Mamlakatlar o'rtasidagi mehnat taqsimoti samaradorligining pasayishi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <div class="number-badge bg-light text-dark">2</div>
+                        </div>
+                        <div>
+                            <h4 class="h5 fw-bold">Xalqaro savdo balansiga ta'sir</h4>
+                            <p class="text-muted">Eksport va import hajmlarining muvozanatsiz o'zgarishi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <div class="number-badge bg-light text-dark">3</div>
+                        </div>
+                        <div>
+                            <h4 class="h5 fw-bold">Xalqaro savdo hajmiga ta'sir</h4>
+                            <p class="text-muted">Umumiy savdo hajmining qisqarishi yoki o'sish sur'atlarining pasayishi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="d-flex align-items-start">
+                        <div class="me-3">
+                            <div class="number-badge bg-light text-dark">4</div>
+                        </div>
+                        <div>
+                            <h4 class="h5 fw-bold">Tovarlar va xizmatlar ekvivalent almashuvining qiyinlashuvi</h4>
+                            <p class="text-muted">Xalqaro savdoda tovarlar qiymatini aniqlashning murakkablashuvi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

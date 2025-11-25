@@ -1,0 +1,13 @@
+{
+  "by_currency": {
+    "USD": 60,
+    "EUR": 25,
+    "GBP": 10,
+    "JPY": 5
+  },
+  "exposure_types": {
+    "Translation": 45,
+    "Transaction": 30,
+    "Economic": 25
+  }
+}

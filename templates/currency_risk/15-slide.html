@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 15{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Valyuta riski</h1>
+                <h2 class="h6 text-muted">Slayd {{ current_slide }}</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="text-center mb-5">
+                        <h2 class="display-4 fw-bold gradient-text mb-4">XULOSA</h2>
+                    </div>
+
+                    <div class="conclusion-text">
+                        <p class="lead mb-4">
+                            Valyuta riski — bu valyuta kurslaridagi o'zgarishlar tufayli yuzaga keladigan moliyaviy yo'qotishlar xavfi.
+                            Global savdoda ishtirok etuvchi kompaniyalar uchun bu muhim omil hisoblanadi.
+                        </p>
+
+                        <p class="mb-4">
+                            Ushbu prezentatsiyada valyuta riskining turlari, sabablari va boshqaruv usullarini ko'rib chiqdik.
+                            Tarixiy ma'lumotlar va diagrammalar orqali USD/UZS kursi va inflyatsiya o'rtasidagi bog'liqlikni tahlil qildik.
+                        </p>
+
+                        <p class="mb-4">
+                            Risklarni minimallashtirish uchun xedj strategiyalari, diversifikatsiya va doimiy monitoring tavsiya etiladi.
+                            Ta'lim videolari orqali chuqurroq bilim olish imkoniyati berildi.
+                        </p>
+
+                        <p class="fw-bold text-primary">
+                            Muvaffaqiyatli moliyaviy qarorlar qabul qilish uchun valyuta riskini to'g'ri baholash va boshqarish muhimdir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+<style>
+.conclusion-text {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    line-height: 1.8;
+}
+
+.conclusion-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.conclusion-text .lead {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .conclusion-text {
+        padding: 1.5rem;
+    }
+    
+    .conclusion-text .lead {
+        font-size: 1.2rem;
+    }
+}
+</style>
+
+{% endblock %}

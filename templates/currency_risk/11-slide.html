@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 11{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Valyuta riski</h1>
+                <h2 class="h6 text-muted">Slayd {{ current_slide }}</h2>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h1 class="display-5 fw-bold">Valyuta mavqei tushunchasi</h1>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="p-4 mb-4 rounded-3" style="background:#eef6f0;">
+                        <h4 class="h4 fw-bold">Valyuta mavqei</h4>
+                        <p class="mb-0">Valyuta bozori ishtirokchisining chet el valutasidagi talablari yoki majburiyatlari o'rtasidagi nisbatni ifodalovchi ko'rsatkich.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="p-4 mb-4 rounded-3" style="background:#eef6f0;">
+                        <h4 class="h4 fw-bold">Ochiq valyuta mavqei</h4>
+                        <p class="mb-0">Chet el valutasidagi talablar va majburiyatlar summasi mos bo'lmagan holat.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="p-4 mb-4 rounded-3" style="background:#eef6f0;">
+                        <h4 class="h4 fw-bold">Yopiq valyuta mavqei</h4>
+                        <p class="mb-0">Chet el valutasidagi talablar va majburiyatlar summasi teng bo'lgan holat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 3{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-3 mb-3 fw-bold gradient-text">Vaqt bo'yicha valyuta kurslari</h1>
+                <h2 class="h4 text-muted mb-4">Valyuta kurslarining vaqt bo'yicha harakati va uning ta'siri</h2>
+            </div>
+
+            <hr class="my-3">
+
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-semibold gradient-text">Valyuta riskining yuzaga kelish sabablari</h2>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-3 h-100 reason-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="number-badge variant-1">1</div>
+                            <div>
+                                <h5 class="mb-1">Inflyatsiya</h5>
+                                <p class="mb-0 lead">Yuqori inflyatsiya mamlakat valutasining qadrsizlanishiga olib keladi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-3 h-100 reason-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="number-badge variant-2">2</div>
+                            <div>
+                                <h5 class="mb-1">Foiz stavkalari</h5>
+                                <p class="mb-0 lead">Past foiz stavkalari investorlarni boshqa valyutalarga o'tishga undaydi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-3 h-100 reason-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="number-badge variant-3">3</div>
+                            <div>
+                                <h5 class="mb-1">Savdo balansi</h5>
+                                <p class="mb-0 lead">Import ko'payishi milliy valyutaga bo'lgan talabni pasaytiradi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-3 h-100 reason-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="number-badge variant-4">4</div>
+                            <div>
+                                <h5 class="mb-1">Siyosiy beqarorlik</h5>
+                                <p class="mb-0 lead">Siyosiy beqarorlik valyutaga bo'lgan ishonchni pasaytiradi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-3 h-100 reason-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="number-badge variant-5">5</div>
+                            <div>
+                                <h5 class="mb-1">Global iqtisodiyot</h5>
+                                <p class="mb-0 lead">Xalqaro bozorlardagi o'zgarishlar valyuta kursini beqaror qiladi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="p-3 h-100 reason-card">
+                        <div class="d-flex align-items-start gap-3">
+                            <div class="number-badge variant-6">6</div>
+                            <div>
+                                <h5 class="mb-1">Xomashyo narxlari</h5>
+                                <p class="mb-0 lead">Global narxlarning tushishi eksportyor davlatlar valyutasiga salbiy ta'sir qiladi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}

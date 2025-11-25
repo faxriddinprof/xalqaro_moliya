@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Valyuta riski — Slide 6{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-4">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd {{ current_slide }} / {{ total_slides }}</span>
+                <h1 class="display-5 mb-2 fw-bold gradient-text">Valyuta riski</h1>
+                <h2 class="h6 text-muted">Slayd {{ current_slide }}</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="fw-bold">Misol:</h3>
+
+                    <p><strong>Kompaniya:</strong> Germaniyada joylashgan avtomobil ishlab chiqaruvchi.</p>
+                    <p><strong>Bozor:</strong> Kompaniya mahsulotlarini AQShda sotadi.</p>
+
+                    <p><strong>Narxlar:</strong></p>
+                    <ul class="mb-2">
+                        <li>Har bir avtomobil AQShda <strong>$50,000</strong> ga sotiladi.</li>
+                        <li>Har bir avtomobilning tannarxi Germaniyada <strong>€36,000</strong>.</li>
+                        <li>Sotilgan avtomobillar: <strong>30 ta</strong>.</li>
+                    </ul>
+
+                    <p><strong>Holat:</strong> Kompaniyaning AQShda yil davomida topgan daromadi <strong>$1,500,000</strong>.</p>
+
+                    <p><strong>Dastlabki kurs:</strong> 1 $ = <strong>0.9 €</strong></p>
+                    <p class="fs-5 fw-semibold text-dark">Hisobotda yevroda ko'rsatilgan daromad: <span class="d-block ms-4">1,500,000 × 0.9 = <strong>1,350,000 €</strong></span></p>
+
+                    <p><strong>Keyingi kurs:</strong> 1 $ = <strong>0.7 €</strong></p>
+                    <p class="fs-5 fw-semibold text-dark">Hisobotdagi daromad kamayadi: <span class="d-block ms-4">1,500,000 × 0.7 = <strong>1,050,000 €</strong></span></p>
+
+                    <div class="mt-4 p-3 recommendation-box">
+                        <p class="mb-1"><strong>Xulosa:</strong> Hisobotdagi daromad <strong>300,000 €</strong> ga kamaydi. Lekin kompaniya AQShda hali ham real <strong>$1,500,000</strong> ga ega. Bu faqat moliyaviy hisobotdagi o'zgarish bo'lib, real ta'sir qilmaydi — bu <em>translyatsion valyuta riski</em>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include 'partials/slide_navigation.html' with base_url_name='currency_slide' %}
+
+{% endblock %}
