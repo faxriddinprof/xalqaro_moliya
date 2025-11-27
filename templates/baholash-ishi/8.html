@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd 8 - Shaffoflik va Mas'uliyat{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd 8 / 12</span>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Shaffoflik va Mas'uliyat</h1>
+                <p class="lead text-muted">Baholovchilar nima uchun xabar berish majbur?</p>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <h5 class="alert-heading mb-2">
+                            <i class="fas fa-eye me-2"></i>Muhim Savol
+                        </h5>
+                        <p class="mb-0">
+                            <strong>Nima uchun baholovchilar xabar berishni majbur?</strong> 
+                            Investor ko'z o'rta baholovchining qaroriga istinodan pul qo'yadi. 
+                            Agar baholovchi notog'ri reyting bersa, investorning puli ketadi. 
+                            Shuning uchun baholovchining QANDAY QAROR BERGANINI bilish kerak!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-book-open text-success me-2"></i>
+                                Shaffoflik Nima Demak?
+                            </h5>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="text-success mb-2">
+                                            <i class="fas fa-list me-2"></i>Methodologiyani Aytib Berish
+                                        </h6>
+                                        <p class="small mb-0">
+                                            Bahovchi aytadi: "Mening qanday usulim bor: 
+                                            A) Moliyaviy analiz, B) Bozor analizi, C) Risk faktor"
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="text-success mb-2">
+                                            <i class="fas fa-balance-scale me-2"></i>Conflict of Interest Aytib Berish
+                                        </h6>
+                                        <p class="small mb-0">
+                                            Bahovchi aytadi: "Men bu kompaniyani baholayotganda, 
+                                            menin o'zimning manfa'atim bor, mening o'zim ham un'da share holder"
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="text-info mb-2">
+                                            <i class="fas fa-chart-pie me-2"></i>Faktoring va Analizlarni Aytib Berish
+                                        </h6>
+                                        <p class="small mb-0">
+                                            "Bu reytingga USHBU 5 ta faktor ta'sir qildi: 
+                                            1) Qarz, 2) Bozor, 3) Management, 4) Sohasi, 5) Risklari"
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="text-warning mb-2">
+                                            <i class="fas fa-history me-2"></i>Tarixiy Qarorlarni Yoyib Berish
+                                        </h6>
+                                        <p class="small mb-0">
+                                            "2015 da bu kompaniyaga A+ bergan edik, 2023 da AAA- 
+                                            o'zgartirdik, chunki..."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-handshake text-danger me-2"></i>
+                                Baholovchilarning Mas'uliylari
+                            </h5>
+                            <div class="table-responsive">
+                                <table class="table table-bordered mb-0">
+                                    <thead class="table-danger">
+                                        <tr>
+                                            <th>Mas'uliyat Turi</th>
+                                            <th>Nima Demak?</th>
+                                            <th>Amalda Nima?</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Juda Xavfli Reyting</strong></td>
+                                            <td>Agar bahovchi A deya bersa, lekin kompaniya ertasi bankrot bo'lsa?</td>
+                                            <td>Investor jarima qilishi mumkin, bahovchi pul to'lashi kerak</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Conflict of Interest</strong></td>
+                                            <td>Agar bahovchi kompaniyaning o'zi ham share holder bo'lsa?</td>
+                                            <td>Bu aldash! Bahovchi o'z manfa'ati uchun yaxshi reyting berdi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Noto'g'ri Methodologiya</strong></td>
+                                            <td>Agar bahovchi bilmasdan, notog'ri analiz qilsa?</td>
+                                            <td>CNMV jarima qiladi, ruxsatnamani olib ketadi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Shaffoflik Kamligni</strong></td>
+                                            <td>Agar bahovchi "bu reytinga nima ta'sir qildi?" deyga gaplama berisa?</td>
+                                            <td>Investor bilmaydi nima uchun o'zgarish bo'ldi, ishonc ketadi</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-star text-warning me-2"></i>
+                                Oxiri Hisoblash
+                            </h5>
+                            <p class="mb-0">
+                                <strong>Shaffoflik + Mas'uliyat = Ishonch</strong><br>
+                                Investor: "OK, bahovchi aytdi u A berishga nima uchun qaror qilganini, 
+                                o'zining conflict nima ekanini aytib berdi, shuning uchun men ishonaman!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        <a href="/baholash/7/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Oldingi
+        </a>
+        <span class="badge bg-dark px-3 py-2">8 / 12</span>
+        <a href="/baholash/9/" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content { max-width: 1200px; margin: 0 auto; }
+.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+{% endblock %}

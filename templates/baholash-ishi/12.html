@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd 12 - Xulosa va Asosiy Darslar{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-success mb-3 px-4 py-2">Slayd 12 / 12</span>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Xulosa: Eng Muhim Narsalar</h1>
+                <p class="lead text-muted">Siz nima o'rgandinggiz?</p>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-list-check text-primary me-2"></i>
+                                Eng Muhim Xulosa
+                            </h5>
+                            
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-primary bg-opacity-10 rounded border border-primary">
+                                        <h6 class="text-primary mb-2">
+                                            <i class="fas fa-check-circle me-2"></i>Baholash Nima?
+                                        </h6>
+                                        <p class="small mb-0">
+                                            Bahovchi kompaniyaning "xavfsizlik ballini" beradi: 
+                                            AAA (juda xavfsiz) dan D (bankrot) gacha. 
+                                            Investor shu reytingga asosan qaror qabul qiladi.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-success bg-opacity-10 rounded border border-success">
+                                        <h6 class="text-success mb-2">
+                                            <i class="fas fa-check-circle me-2"></i>Nima Uchun Kerak?
+                                        </h6>
+                                        <p class="small mb-0">
+                                            Investorlar milliardlab dollarlari bor. 
+                                            Ularning "Bu kompaniya xavfsizmi?" soroliga 
+                                            bahovchi javob beradi.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-info bg-opacity-10 rounded border border-info">
+                                        <h6 class="text-info mb-2">
+                                            <i class="fas fa-check-circle me-2"></i>Kim Nazorat Qiladi?
+                                        </h6>
+                                        <p class="small mb-0">
+                                            Ispaniyada: <strong>CNMV</strong> - qat'iy qoidalarni tadbiq qiladi, 
+                                            jarima qiladi. EU da: Hamjamiyat qonunlari.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-warning bg-opacity-10 rounded border border-warning">
+                                        <h6 class="text-warning mb-2">
+                                            <i class="fas fa-check-circle me-2"></i>2008 Darslar
+                                        </h6>
+                                        <p class="small mb-0">
+                                            Lehman Brothers bankrot bo'lishdan oldin AAA berilgan edi. 
+                                            $700 mlrd yo'qol. Shuning uchun "Shaffoflik + Mas'uliyat" kerak.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-danger bg-opacity-10 rounded border border-danger">
+                                        <h6 class="text-danger mb-2">
+                                            <i class="fas fa-check-circle me-2"></i>Hozir Muammolar
+                                        </h6>
+                                        <p class="small mb-0">
+                                            Conflict of interest, AI xatolar, bozor gapiga bog'liq reyting 
+                                            (pro-cyclicality), davlat reytingli masala, oligopol.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="p-3 bg-success bg-opacity-10 rounded border border-success">
+                                        <h6 class="text-success mb-2">
+                                            <i class="fas fa-check-circle me-2"></i>Yechimlar
+                                        </h6>
+                                        <p class="small mb-0">
+                                            Qat'iy nazorat, yangi bahovchilar, shaffoflik majburiy, 
+                                            mas'uliyat taqiqlash, xodim sertifikatsiya, training.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-12 text-center">
+                    <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <div class="card-body py-5">
+                            <h4 class="card-title mb-3">
+                                <i class="fas fa-book me-2"></i>Oxiri Shloka
+                            </h4>
+                            <p class="card-text fs-5 mb-0">
+                                "Baholash bozori - bu dunyoning moliya tizimining yuraksi! 
+                                Agar yurak xato qalba'lsa, barchasining xalfa. Shuning uchun 
+                                CNMV va EU o'zini xal qilmoq uchun qat'iy qoidalar tadbiq qiladi!"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        <a href="/baholash/11/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Oldingi
+        </a>
+        <span class="badge bg-dark px-3 py-2">12 / 12</span>
+        <a href="{% url 'presentations_list' %}" class="btn btn-success">
+            Barcha Taqdimotga Qaytish <i class="fas fa-list ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content { max-width: 1200px; margin: 0 auto; }
+.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+{% endblock %}

@@ -118,41 +118,20 @@
                 </div>
             </div>
 
-            <!-- Course Project Section -->
+            <!-- Presentations Section -->
             <div class="card shadow-sm border-0 bg-gradient-primary text-white mb-4">
-                <div class="card-body">
+                <div class="card-body text-center">
                     <h4 class="card-title mb-3">
                         <i class="fas fa-book-open me-2"></i>
-                        Mustaqil ish Loyihasi-1
+                        Prezentatsiyalar Ro'yxati
                     </h4>
-                    <div class="mb-3">
-                        <p class="mb-1"><strong>Fan:</strong> Xalqaro moliya</p>
-                        <p class="mb-0"><strong>Mavzu:</strong> Jahon moliya markazlari rivojlanish bosqichlari</p>
-                    </div>
+                    <p class="mb-3">
+                        Mustaqil ish loyihalarim uchun yaratilgan prezentatsiyalar
+                    </p>
                     <div class="d-grid">
-                        <a href="{% url 'slide' slide_number=1 %}" class="btn btn-light btn-lg">
-                            <i class="fas fa-play-circle me-2"></i>
-                            Prezentatsiyani boshlash
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Currency Risk Presentation Card -->
-            <div class="card shadow-sm border-0 bg-gradient-primary text-white mt-4 mb-4">
-                <div class="card-body">
-                    <h4 class="card-title mb-3">
-                        <i class="fas fa-book-open me-2"></i>
-                        Mustaqil ish Loyihasi-2
-                    </h4>
-                    <div class="mb-3">
-                        <p class="mb-1"><strong>Fan:</strong> Moliyaviy risklar</p>
-                        <p class="mb-0"><strong>Mavzu:</strong> Valyuta riski</p>
-                    </div>
-                    <div class="d-grid">
-                        <a href="{% url 'currency_slide' slide_number=1 %}" class="btn btn-light btn-lg">
-                            <i class="fas fa-play-circle me-2"></i>
-                            Prezentatsiyani boshlash
+                        <a href="{% url 'presentations_list' %}" class="btn btn-light btn-lg">
+                            <i class="fas fa-list me-2"></i>
+                            Ro'yxatni ko'rish
                         </a>
                     </div>
                 </div>
@@ -163,25 +142,25 @@
 </div>
 
 <style>
-.profile-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 4px solid #f8f9fa;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 4px solid #f8f9fa;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-.bg-gradient-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
+    .bg-gradient-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
 
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
-}
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+    }
 </style>
 {% endblock %}

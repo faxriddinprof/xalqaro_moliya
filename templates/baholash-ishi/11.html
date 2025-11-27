@@ -1,0 +1,393 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd 11 - Islohatlari Natijalari: Statistika va Ma'lumotlar{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd 11 / 12</span>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Islohatlari Natijalari: Statistika</h1>
+                <p class="lead text-muted">2009-2024 yillar: EU va Espaniya reformalari natijalari</p>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Intro Alert -->
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="alert alert-danger border-0 shadow-sm">
+                        <h5 class="alert-heading mb-2">
+                            <i class="fas fa-exclamation-triangle me-2"></i>Nima Uchun Bu Ma'lumotlar Muhim?
+                        </h5>
+                        <p class="mb-0">
+                            <strong>2008-2009 yillarida:</strong> Global moliyaviy inqirozda investorlar milliardlab pul yo'qot qoldirdi. 
+                            Sababi: Kredit baholovchi agentliklar (CRA) noto'g'ri reytinglar bergan edi (masalan, xavfli obligatsiyalarga AAA berdi). 
+                            <strong>EU va Espaniya javobi:</strong> Yangi qoidalar qabul qildi (Regulation 1060/2009 va o'zgartirishlar). 
+                            Natija: Raqobat oshdi, xatolar kamaydi, mas'uliyat kuchaydi. Espaniyada CNMV bu qoidalarni amalga oshirdi - davlat reytingi barqarorni oldi.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row 1 -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-2">
+                                <i class="fas fa-chart-line text-primary me-2"></i>
+                                1️⃣ Baholovchilar Soni O'zgargan
+                            </h5>
+                            <p class="text-muted small mb-3">
+                                <strong>2009 (Islohotgacha):</strong> AQShda 3 ta NRSRO (Big Three: S&P, Moody's, Fitch). 
+                                EU'da 3-5 ta. Monopoliya xavfli edi. 
+                                <strong>2024-2025 (Bugun):</strong> AQShda 10 ta, EU'da 28 ta agentlik. 
+                                Espaniyada CNMV 2-3 katta agentlikni nazorat qiladi. Yangi agentliklar (Scope, DBRS) qo'shildi.
+                            </p>
+                            <div style="height: 250px;">
+                                <canvas id="bahovchilarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-2">
+                                <i class="fas fa-percent text-success me-2"></i>
+                                2️⃣ Big Three Bozor Ulushi Pasaydi
+                            </h5>
+                            <p class="text-muted small mb-3">
+                                <strong>2009:</strong> S&P, Moody's, Fitch dunyo bozorining 95% ini (EU'da 90%+) nazorat qilardi. 
+                                Bir xato - butun bozor silkinardi. 
+                                <strong>2024-2025:</strong> Global 90-95%, EU'da 85-90% (yangi agentliklar ulush oldi). 
+                                Espaniyada hali 95%+, lekin ESMA diversifikatsiyani rag'batlantirmoqda.
+                            </p>
+                            <div style="height: 250px;">
+                                <canvas id="bozorUlushiChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row 2 -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-2">
+                                <i class="fas fa-euro-sign text-warning me-2"></i>
+                                3️⃣ Jarimalar Kuchaydi (EU/CNMV)
+                            </h5>
+                            <p class="text-muted small mb-3">
+                                <strong>2010:</strong> Maksimal jarima €5 million (Regulation 1060/2009). Agentliklarga "ogohlantirish" edi. 
+                                <strong>2024-2025:</strong> Maksimal €10 million yoki global aylanmaning 10% i. 
+                                Amaliyotda yuqoriroq: S&P'ga €12M (2019), Moody'sga €3.7M. ESMA 2024 da €20M+ jarima berdi.
+                            </p>
+                            <div style="height: 250px;">
+                                <canvas id="jarimaChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-2">
+                                <i class="fas fa-chart-pie text-info me-2"></i>
+                                4️⃣ Reyting Xatolari Azaydi
+                            </h5>
+                            <p class="text-muted small mb-3">
+                                <strong>2012:</strong> Reyting jarayonlarida xatolar 70-75% (protsiklik baholash, kech downgrade). 
+                                <strong>2024-2025:</strong> Xatolar 20-30% ga tushdi (ESMA tadqiqotlari bo'yicha aniqlik 50%+ oshdi). 
+                                Sababi: Yangi metodologiyalar, qat'iy nazorat, sertifikatsiya talablari. Espaniya reytingi barqaror.
+                            </p>
+                            <div style="height: 250px;">
+                                <canvas id="xatolarChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Summary Table -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-table text-primary me-2"></i>
+                                Qisqacha Xulosa: Asosiy O'zgarishlar (Oldin va Keyin)
+                            </h5>
+                            <p class="text-muted small mb-3">
+                                🔴 <strong>Oldin (2009-2012):</strong> Muammolar - monopoliya, yuqori xatolar, kichik jarimalari. 
+                                🟢 <strong>Keyin (2024-2025):</strong> Yaxshilanishlar - raqobat, past xatolar, katta jarimalari. 
+                                Ma'lumotlar EU/Espaniya fokusida, ESMA va SEC ra'aylariga asoslanib.
+                            </p>
+                            <div class="table-responsive">
+                                <table class="table table-hover align-middle">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th style="width: 25%;">Ko'rsatkich</th>
+                                            <th style="width: 25%;">Oldin (2009-2012)</th>
+                                            <th style="width: 25%;">Keyin (2024-2025)</th>
+                                            <th style="width: 25%;">Nima O'zgargan?</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>AQSh Agentliklari (NRSRO)</strong></td>
+                                            <td><span class="badge bg-danger">3 ta</span></td>
+                                            <td><span class="badge bg-success">10 ta</span></td>
+                                            <td>+7 ta ↑ Raqobat +30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>EU Agentliklari (ESMA)</strong></td>
+                                            <td><span class="badge bg-danger">3-5 ta</span></td>
+                                            <td><span class="badge bg-success">28 ta</span></td>
+                                            <td>+23 ta ↑ Diversifikatsiya</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Dunyo Agentliklari</strong></td>
+                                            <td><span class="badge bg-danger">30-40 ta</span></td>
+                                            <td><span class="badge bg-success">100+ ta</span></td>
+                                            <td>+60+ ta ↑ Milliy agentliklar</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Big Three Bozor Ulushi</strong></td>
+                                            <td><span class="badge bg-danger">95% (monopoliya)</span></td>
+                                            <td><span class="badge bg-success">90-95% (EU: 85-90%)</span></td>
+                                            <td>-5-10% ↓ Xavf azaldi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Jarimalar (Maksimal)</strong></td>
+                                            <td><span class="badge bg-danger">€5M</span></td>
+                                            <td><span class="badge bg-success">€10M+ (€12M+ amaliyot)</span></td>
+                                            <td>+2-10x ↑ Mas'uliyat</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Reyting Xatolari</strong></td>
+                                            <td><span class="badge bg-danger">70-75% (yuqori)</span></td>
+                                            <td><span class="badge bg-success">20-30% (past)</span></td>
+                                            <td>-3-4x ↓ Sifat +50%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="alert alert-success mt-3 mb-0">
+                                <strong>📊 Umumiy Natija:</strong> EU islohotlari (CNMV orqali Espaniyada) bozorni xavfsizroq qildi. 
+                                Raqobat +30%, xatolar -50%+, investorlar ishonchi oshdi. 2008 krizisi takrorlanishining oldini oldi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        <a href="/baholash/10/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Oldingi
+        </a>
+        <span class="badge bg-dark px-3 py-2">11 / 12</span>
+        <a href="/baholash/12/" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+    .slide-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    canvas {
+        max-height: 100%;
+        max-width: 100%;
+    }
+</style>
+
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const chartConfig = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false }
+            }
+        };
+
+        // 1. Bahovchilar Soni Chart
+        const bahovchilarCtx = document.getElementById('bahovchilarChart');
+        if (bahovchilarCtx) {
+            new Chart(bahovchilarCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2009 (AQSh)', '2024 (AQSh)', '2024 (EU)'],
+                    datasets: [{
+                        label: 'Ruxsat Berilgan Agentliklar',
+                        data: [3, 10, 28],
+                        backgroundColor: [
+                            'rgba(220, 53, 69, 0.85)',
+                            'rgba(255, 193, 7, 0.85)',
+                            'rgba(40, 167, 69, 0.85)'
+                        ],
+                        borderColor: [
+                            'rgba(220, 53, 69, 1)',
+                            'rgba(255, 193, 7, 1)',
+                            'rgba(40, 167, 69, 1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    indexAxis: 'y',
+                    scales: {
+                        x: { beginAtZero: true, max: 35 }
+                    }
+                }
+            });
+        }
+
+        // 2. Bozor Ulushi Chart
+        const bozorUlushiCtx = document.getElementById('bozorUlushiChart');
+        if (bozorUlushiCtx) {
+            new Chart(bozorUlushiCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2009 (Global)', '2024 (Global)', '2024 (EU)'],
+                    datasets: [{
+                        label: 'Big Three Bozor Ulushi (%)',
+                        data: [95, 92, 87],
+                        backgroundColor: [
+                            'rgba(220, 53, 69, 0.85)',
+                            'rgba(255, 193, 7, 0.85)',
+                            'rgba(76, 175, 80, 0.85)'
+                        ],
+                        borderColor: [
+                            'rgba(220, 53, 69, 1)',
+                            'rgba(255, 193, 7, 1)',
+                            'rgba(76, 175, 80, 1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { callback: function(v) { return v + '%'; } }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 3. Jarimalar Chart
+        const jarimaCtx = document.getElementById('jarimaChart');
+        if (jarimaCtx) {
+            new Chart(jarimaCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2010 (Maksimal)', '2024 (Maksimal)', '2024 (Amaliyot)'],
+                    datasets: [{
+                        label: 'Jarimalari (Million €)',
+                        data: [5, 10, 12],
+                        backgroundColor: [
+                            'rgba(255, 152, 0, 0.85)',
+                            'rgba(255, 193, 7, 0.85)',
+                            'rgba(220, 53, 69, 0.85)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 152, 0, 1)',
+                            'rgba(255, 193, 7, 1)',
+                            'rgba(220, 53, 69, 1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 15,
+                            ticks: { callback: function(v) { return '€' + v + 'M'; } }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 4. Xatolar Chart
+        const xatolarCtx = document.getElementById('xatolarChart');
+        if (xatolarCtx) {
+            new Chart(xatolarCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2012 (Protsiklik)', '2024 (Barqaror)', '2024 (Espaniya)'],
+                    datasets: [{
+                        label: 'Reyting Xatolari (%)',
+                        data: [72, 25, 20],
+                        backgroundColor: [
+                            'rgba(220, 53, 69, 0.85)',
+                            'rgba(255, 193, 7, 0.85)',
+                            'rgba(40, 167, 69, 0.85)'
+                        ],
+                        borderColor: [
+                            'rgba(220, 53, 69, 1)',
+                            'rgba(255, 193, 7, 1)',
+                            'rgba(40, 167, 69, 1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { callback: function(v) { return v + '%'; } }
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>
+
+{% endblock %}

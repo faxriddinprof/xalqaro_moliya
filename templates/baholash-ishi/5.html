@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd 5 - Baholash Metodologiyalari{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd 5 / 12</span>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Baholovchilar Reytingni Qanday Beradi?</h1>
+                <p class="lead text-muted">Metodologiyalar va hisob-kitoblar</p>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="alert alert-info border-0 shadow-sm">
+                        <h5 class="alert-heading mb-2">
+                            <i class="fas fa-lightbulb me-2"></i>Sodda Misol
+                        </h5>
+                        <p class="mb-0">
+                            <strong>Siz o'quvchi bo'lsangiz:</strong> Ustoza o'quvchini baholaydi - 
+                            Matematikaning testida 90 ball (yaxshi), til imtihonida 70 ball (o'rtacha), 
+                            jabrlar imtihonida 50 ball (yomon). Ushbu 3 ta natija orqali "Umumiy baholash" beradi. 
+                            Xuddi shunday, baholovchilar ham kompaniyaga reyting beradi!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-chart-line text-primary me-2"></i>
+                                Baholash Metodologiyasi (Asosiy Bosqichlar)
+                            </h5>
+                            
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <div class="bg-light p-3 rounded mb-3 border-start border-primary border-3">
+                                        <h6 class="mb-2"><span class="badge bg-primary me-2">1</span> Ma'lumotlarni Yig'ish</h6>
+                                        <p class="mb-0 small text-muted">
+                                            Kompaniyaning malumotlari: Balans, foyda/zararlar, borliqlar, xodimlar soni, bozoriga, 
+                                            hammasini yig'ish
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="bg-light p-3 rounded mb-3 border-start border-success border-3">
+                                        <h6 class="mb-2"><span class="badge bg-success me-2">2</span> Moliyaviy Analizini Qilish</h6>
+                                        <p class="mb-0 small text-muted">
+                                            Baholovchilar hisobladilar: Qarz nisbati (Debt Ratio), Likvid nisbati (Liquidity Ratio), 
+                                            Foyda nisbati (Profit Margin). Xuddi o'quvchining "GPA" ni hisoblash kabi!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="bg-light p-3 rounded mb-3 border-start border-warning border-3">
+                                        <h6 class="mb-2"><span class="badge bg-warning me-2">3</span> Sohani Tahlil Qilish</h6>
+                                        <p class="mb-0 small text-muted">
+                                            "Bu kompaniya qaysi sohada ishlaydi? Banki, telekommunikatsiya, auto? O'sha sohaning 
+                                            holati qanday?" deyib tekshiradilar
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="bg-light p-3 rounded mb-3 border-start border-danger border-3">
+                                        <h6 class="mb-2"><span class="badge bg-danger me-2">4</span> Risklarni Qo'yish</h6>
+                                        <p class="mb-0 small text-muted">
+                                            "Agar shunga ikkinchi sanada davlat o'zgarsa? Agar bozor tushsa? Agar xodimlar 
+                                            ketsa?" deyib, mumkin bo'lgan risklar hisoblanilar
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="bg-light p-3 rounded border-start border-info border-3">
+                                        <h6 class="mb-2"><span class="badge bg-info me-2">5</span> Final Reytingni Berish</h6>
+                                        <p class="mb-0 small text-muted">
+                                            Hammasini o'ylagan-o'yli, "Bu kompaniyaga AAA, yoki A, yoki BBB" deyib, final reytingni beradi
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-ruler-combined text-success me-2"></i>
+                                Asosiy Nisbatlar (Key Ratios)
+                            </h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Nisbat Nomi</th>
+                                            <th>Formula</th>
+                                            <th>Nima Uchun Muhim?</th>
+                                            <th>Misol</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Debt-to-Equity</strong></td>
+                                            <td>Qarz / Kapital</td>
+                                            <td>Kompaniya qancha qarz olgan?</td>
+                                            <td>1.5 = Xavfli</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Current Ratio</strong></td>
+                                            <td>Hozirgi Activlar / Hozirgi Passivlar</td>
+                                            <td>Kompaniya bir yilda qarzini to'lay oladimi?</td>
+                                            <td>2.0 = Yaxshi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ROE</strong> (Foyda Nisbati)</td>
+                                            <td>Foyda / Kapital</td>
+                                            <td>Kompaniya kapitaldan foydani qilmoqda?</td>
+                                            <td>15% = Yaxshi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Interest Coverage</strong></td>
+                                            <td>EBIT / Foizlar</td>
+                                            <td>Kompaniya foizni to'lay oladi?</td>
+                                            <td>5x = Yaxshi</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-star text-warning me-2"></i>
+                                Muhim Nuqta!
+                            </h5>
+                            <p class="mb-2">
+                                Baholovchilar reyting berishda <strong>Qualitative</strong> (sifat) va <strong>Quantitative</strong> (miqdor) 
+                                analytiklarni birga ishlatadilar. Faqat raqamlar emas, balki kompaniyaning <strong>va'dalarini, 
+                                strategiyasini, boshqaruv sifatini</strong> ham ko'radilar.
+                            </p>
+                            <p class="mb-0">
+                                <em>"Raqamlar yotishi mumkin, lekin kompaniyaning ruhxali boshqaruvchisi va toza ijro etish 
+                                tarixiy shuning uchun baholovchilar "sahla qil" deyadilar."</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        <a href="/baholash/4/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Oldingi
+        </a>
+        <span class="badge bg-dark px-3 py-2">5 / 12</span>
+        <a href="/baholash/6/" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content { max-width: 1200px; margin: 0 auto; }
+.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+{% endblock %}

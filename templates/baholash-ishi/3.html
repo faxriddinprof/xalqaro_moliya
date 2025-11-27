@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd 3 - Ispaniyada Baholash Qonunlari{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd 3 / 12</span>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Ispaniyada Baholash Qonunlari</h1>
+                <p class="lead text-muted">Qanday qoidalar bor va kim nazorat qiladi?</p>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-gavel text-primary me-2"></i>
+                                Qo'llaniluvchi Qonunlar
+                            </h5>
+                            <p class="mb-3"><strong>2 ta darajali nazorat:</strong></p>
+                            <div class="mb-3 p-3 border-start border-4 border-primary rounded">
+                                <h6 class="text-primary mb-2">🇪🇺 Yevropa Ittifoqi (EU) darajasi</h6>
+                                <p class="small text-muted mb-0">
+                                    <strong>Regulation 1060/2009</strong> - Butun EU'da Baholovchilarni tartibga suvchi asosiy qonun. 
+                                    Bu ESMA (European Securities Markets Authority) tomonidan nazorat qilinadi.
+                                </p>
+                            </div>
+                            <div class="p-3 border-start border-4 border-success rounded">
+                                <h6 class="text-success mb-2">🇪🇸 Ispaniya Darajasi</h6>
+                                <p class="small text-muted mb-0">
+                                    <strong>Ley 34/1988 va Ley 24/1988</strong> - Ispaniyaning o'z qonunlari. 
+                                    CNMV (Comisión Nacional del Mercado de Valores) tomonidan nazorat qilinadi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-building-columns text-success me-2"></i>
+                                CNMV - Nazorat Organi
+                            </h5>
+                            <p class="mb-3">
+                                <strong>CNMV</strong> = Ispaniyaning "Qimmatli Qog'ozlar Bozori Komissiyasi"
+                            </p>
+                            <p class="mb-3"><strong>CNMV nima qiladi?</strong></p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Ruxsatname berish</strong> - Baholovchilar Ispaniyada faoliyat ko'rsatishdan oldin ruxsat olish kerak
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Kuzatish</strong> - Doimiy nazorat, ularning ishlari to'g'ri bo'lishini tekshirish
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <strong>Jaza berish</strong> - Qonunni buzgan Baholovchilarni jarima qilish
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-layer-group text-primary me-2"></i>
+                                Tartibga Solishning Asosiy Tamoyillari
+                            </h5>
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="text-primary mb-2">
+                                            <i class="fas fa-shield me-2"></i>
+                                            1️⃣ Mustaqillik
+                                        </h6>
+                                        <p class="small text-muted mb-0">
+                                            Baholovchilar <strong>HECH KIMGA</strong> bog'lanmagan bo'lish kerak. Ular kimdan pul olyapti, unga taasir qilmasligi kerak.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="text-success mb-2">
+                                            <i class="fas fa-eye me-2"></i>
+                                            2️⃣ Shaffoflik
+                                        </h6>
+                                        <p class="small text-muted mb-0">
+                                            Baholovchilar OCHIQ qilish kerak: "Qanday qilib reytingli berdik?" deb. Foydalanuvchilar xavflarni bilishlari kerak.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="text-info mb-2">
+                                            <i class="fas fa-balance-scale me-2"></i>
+                                            3️⃣ Mas'uliyat
+                                        </h6>
+                                        <p class="small text-muted mb-0">
+                                            Agar bahovchi NOTO'G'RI reytingli bersa, u javobgar! Investorlar unda da'vo qila oladi.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        <a href="/baholash/2/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Oldingi
+        </a>
+        <span class="badge bg-dark px-3 py-2">3 / 12</span>
+        <a href="/baholash/4/" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content { max-width: 1200px; margin: 0 auto; }
+.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+{% endblock %}
