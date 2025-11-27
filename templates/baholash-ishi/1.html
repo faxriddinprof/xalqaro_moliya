@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd 1 - Espaniya Baholash Faoliyati{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd 1 / 12</span>
+                <h1 class="display-3 mb-3 fw-bold gradient-text">Espaniya Davlati Baholash Faoliyati</h1>
+                <h2 class="h3 text-muted mb-4">Va uni Tartibga Solish</h2>
+                <div class="d-flex justify-content-center align-items-center gap-3 text-muted">
+                    <span><i class="fas fa-user me-2"></i>Faxriddin Baxtiyorov</span>
+                    <span>|</span>
+                    <span><i class="fas fa-university me-2"></i>TDIU</span>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="alert alert-primary border-0 shadow-sm">
+                        <h4 class="alert-heading mb-3">
+                            <i class="fas fa-lightbulb me-2"></i>Nega bu mavzu muhim?
+                        </h4>
+                        <p class="mb-2"><strong>Kredit reytingi nima?</strong> Bu kompaniya yoki davlatning qarz to'layotganini bilishdagi imkonidir.</p>
+                        <p class="mb-3"><strong>Haqiqiy misollar:</strong></p>
+                        <ul class="mb-2">
+                            <li><strong>✓ Google</strong> - Reytingi AAA (eng baland) - Investorlar unga qarzni xavfsiz beradi</li>
+                            <li><strong>✓ Ispaniya</strong> - Reytingi A - Yaxshi kredit imkoniyligi</li>
+                            <li><strong>✗ Bankrot bo'lgan kompaniya</strong> - Reytingi D - Hech kim qarz bermaydi</li>
+                        </ul>
+                        <p class="mb-0">
+                            <strong>Bugun biz oʻrganamiz:</strong> Ispaniyada kredit reytinglari qanday beriladi, kimlar beradi, va qanday qoidalar bor?
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h3 class="mb-4 text-center">
+                        <i class="fas fa-list-ol me-2 text-primary"></i>Bugungi Mavzular
+                    </h3>
+                    
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-2"><span class="badge bg-primary me-2">1</span>Tushunchalar</h5>
+                                    <p class="card-text small text-muted mb-0">Baholash nima, nima uchun kerak, reytinglari shkala</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-2"><span class="badge bg-success me-2">2</span>Qonunlar</h5>
+                                    <p class="card-text small text-muted mb-0">Ispaniya va EU qonunlari, CNMV roli</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-2"><span class="badge bg-warning me-2">3</span>Tashkilotlar</h5>
+                                    <p class="card-text small text-muted mb-0">S&P, Moody's, Fitch va ularning akkreditatsiyasi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-2"><span class="badge bg-info me-2">4</span>Metodlar</h5>
+                                    <p class="card-text small text-muted mb-0">Qanday qilib reytingli beriladi, analiz usullari</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-2"><span class="badge bg-danger me-2">5</span>Nazorat</h5>
+                                    <p class="card-text small text-muted mb-0">Bahovchilar qanday kuzatiladi va tartibga solinadi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0 shadow-sm h-100 hover-card">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-2"><span class="badge bg-secondary me-2">6</span>Muammolar</h5>
+                                    <p class="card-text small text-muted mb-0">Bugungi kunning tahdidlari va yechimlar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        <span class="badge bg-dark px-3 py-2">1 / 12</span>
+        <a href="/baholash/2/" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content { max-width: 1200px; margin: 0 auto; }
+.hover-card { transition: all 0.3s ease; }
+.hover-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important; }
+.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+{% endblock %}

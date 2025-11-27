@@ -1,0 +1,224 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd 6 - Baholash Jarayoni{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd 6 / 12</span>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Baholash Jarayoni Qanday Ketadi?</h1>
+                <p class="lead text-muted">Reytingni bershmagunicha nima bo'ladi?</p>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="alert alert-warning border-0 shadow-sm">
+                        <h5 class="alert-heading mb-2">
+                            <i class="fas fa-question-circle me-2"></i>Sodda Misol
+                        </h5>
+                        <p class="mb-0">
+                            <strong>Film ijro etish kabi:</strong> Rezhissyor film qilmoqda - ssenariyi (ba'zi kompaniya ariza), 
+                            xanjar tushunchaning qismi (malumotlar yig'ish), cast selection (analiz), shooting (tekshiruv), 
+                            editing (final baholash), va release (reyting berish)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-list-check text-primary me-2"></i>
+                                Baholash Jarayonining 7 Bosqichi
+                            </h5>
+
+                            <div class="timeline">
+                                <div class="timeline-item mb-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2 text-center">
+                                            <div class="bg-primary text-white rounded-circle p-3 d-inline-block">
+                                                <h5 class="mb-0">1</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h6 class="text-primary fw-bold">Initial Meeting (Birinchi Uchrashuv)</h6>
+                                            <p class="text-muted mb-0">
+                                                Kompaniya bahovchiga bor va aytadi: "Meni reyting berib er!" 
+                                                Bahovchilar o'ylaydilar: "OK, kuchli bo'lsa biz qilishimiz mumkin" deydi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item mb-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2 text-center">
+                                            <div class="bg-success text-white rounded-circle p-3 d-inline-block">
+                                                <h5 class="mb-0">2</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h6 class="text-success fw-bold">Information Request (Ma'lumotlarni So'rash)</h6>
+                                            <p class="text-muted mb-0">
+                                                Bahovchilar kompaniyaga aytadi: "Menga berish kerak: 2007-2024 yillar balansi, 
+                                                xodimlar soni, strategiya hujjatlari, boshqaruvchilar CV'si, va boshqalar"
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item mb-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2 text-center">
+                                            <div class="bg-warning text-white rounded-circle p-3 d-inline-block">
+                                                <h5 class="mb-0">3</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h6 class="text-warning fw-bold">Analytical Discussions (Muhokama)</h6>
+                                            <p class="text-muted mb-0">
+                                                Bahovchilar analitiklar va kompaniyaning CEO/CFO si o'rtasida "Q&A" qiladi. 
+                                                "Nima uchun foydaangiz tushdi?" "Qarzingiz nima uchun ko'paydi?" deyib so'rashadi
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item mb-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2 text-center">
+                                            <div class="bg-info text-white rounded-circle p-3 d-inline-block">
+                                                <h5 class="mb-0">4</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h6 class="text-info fw-bold">Rating Committee (Reytingli Komissiyasi)</h6>
+                                            <p class="text-muted mb-0">
+                                                Bahovchilarning senior analitiklarining komissiyasi (3-5 odam) yig'iladi. 
+                                                "Bu kompaniyaga A beramizmi yoki BBB?" deyib muhokama qiladi. Voting bor!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item mb-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2 text-center">
+                                            <div class="bg-danger text-white rounded-circle p-3 d-inline-block">
+                                                <h5 class="mb-0">5</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h6 class="text-danger fw-bold">Rating Determination (Reytingni Aniqlash)</h6>
+                                            <p class="text-muted mb-0">
+                                                Komissiyaning eng yutdi hakami final reytingni aniqlaydi. 
+                                                Misol uchun: "BBBA bulanadi" deya, hammasiga aytila'
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item mb-4">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2 text-center">
+                                            <div class="bg-secondary text-white rounded-circle p-3 d-inline-block">
+                                                <h5 class="mb-0">6</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h6 class="text-secondary fw-bold">Pre-Release Discussion (Rasmiy Berish Oldin)</h6>
+                                            <p class="text-muted mb-0">
+                                                Kompaniyaga reyting va reason (sabab) qabul qilish imkoni beriladi. 
+                                                Kompaniya: "Nima uchun A emas, BBB?" deya protesto qilishi mumkin
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-2 text-center">
+                                            <div class="bg-success text-white rounded-circle p-3 d-inline-block">
+                                                <h5 class="mb-0">7</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-10">
+                                            <h6 class="text-success fw-bold">Rating Release (Reyting Rasmiy Berish)</h6>
+                                            <p class="text-muted mb-0">
+                                                Reytingni bozorga e'lon qiladi! Media "XYZ Bank BBB rated!" deya yozadi. 
+                                                Dunyodagi investorlar bunga qaraydilar!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-hourglass-end text-danger me-2"></i>
+                                Bu Jarayonning Vaqti Qancha?
+                            </h5>
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <h6 class="text-muted">Sodda Kompaniya</h6>
+                                    <h5 class="text-primary fw-bold">2-3 oy</h5>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h6 class="text-muted">O'rtacha Kompaniya</h6>
+                                    <h5 class="text-success fw-bold">3-6 oy</h5>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h6 class="text-muted">Katta Bank/Davlat</h6>
+                                    <h5 class="text-warning fw-bold">6-12 oy</h5>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h6 class="text-muted">Eng Murakkab</h6>
+                                    <h5 class="text-danger fw-bold">1+ yil</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        <a href="/baholash/5/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Oldingi
+        </a>
+        <span class="badge bg-dark px-3 py-2">6 / 12</span>
+        <a href="/baholash/7/" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content { max-width: 1200px; margin: 0 auto; }
+.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+</style>
+{% endblock %}

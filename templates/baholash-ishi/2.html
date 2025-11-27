@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Slayd 2 - Baholash Tushunchasi{% endblock %}
+
+{% block content %}
+<div class="slide-container">
+    <div class="container">
+        <div class="slide-content">
+            <div class="text-center mb-5">
+                <span class="badge bg-primary mb-3 px-4 py-2">Slayd 2 / 12</span>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Kredit Reytingi va Bahovchilar</h1>
+                <p class="lead text-muted">Baholash nima va kimlar beradi?</p>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-book text-primary me-2"></i>Baholash Tushunchasi
+                            </h5>
+                            <p class="mb-3">
+                                <strong>Kredit reytingi</strong> - bu kompaniya yoki davlatning <strong>qarz to'layotganini</strong> bilishdagi imkonidir.
+                            </p>
+                            <p class="mb-3"><strong>Oddiy misol:</strong></p>
+                            <div class="bg-light p-3 rounded">
+                                <p class="small mb-2">
+                                    👤 Siz: "Do'stim, menga 10 milyonni qarz berish mumkinmi?"
+                                </p>
+                                <p class="small mb-2">
+                                    🤔 Do'st: "Kanaqa, avvala sen qanday ish qilyapsan? Maoshingiz qancha? Avval qarzni to'lagan bo'lganmi?"
+                                </p>
+                                <p class="small mb-0">
+                                    💰 <strong>Bahovchi ham xuddi shunday soraydiga, lekin PROFESSIONAL!</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-building text-success me-2"></i>Baholash Kimlar Beradi?
+                            </h5>
+                            <p class="mb-3"><strong>Asosiy 3 ta bahovchi (CRA):</strong></p>
+                            <ul class="list-unstyled">
+                                <li class="mb-3 p-2 bg-light rounded">
+                                    <div class="badge bg-primary p-2 mb-2">1</div>
+                                    <strong>Standard & Poor's (S&P)</strong>
+                                    <p class="small text-muted mb-0">👑 Eng katta, 40% bozar ulushi</p>
+                                </li>
+                                <li class="mb-3 p-2 bg-light rounded">
+                                    <div class="badge bg-success p-2 mb-2">2</div>
+                                    <strong>Moody's</strong>
+                                    <p class="small text-muted mb-0">👑 Ikkinchi eng katta, 40% bozar ulushi</p>
+                                </li>
+                                <li class="p-2 bg-light rounded">
+                                    <div class="badge bg-info p-2 mb-2">3</div>
+                                    <strong>Fitch Ratings</strong>
+                                    <p class="small text-muted mb-0">📊 Uchinchi etakchi, 20% bozar ulushi</p>
+                                </li>
+                            </ul>
+                            <p class="small text-muted mt-3 mb-0">
+                                <i class="fas fa-check me-2"></i>Bu tashkilotlar <strong>MUSTAQIL</strong> - hech kimga bog'lanmagan
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">
+                                <i class="fas fa-scale-balanced text-primary me-2"></i>
+                                Reytinglari Shkala va Ma'nosi
+                            </h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover mb-0">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Reytingi</th>
+                                            <th>Mazmuni</th>
+                                            <th>Risk</th>
+                                            <th>Misol</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="table-success">
+                                            <td><span class="badge bg-success px-3 py-2">AAA</span></td>
+                                            <td><strong>Eng Baland Sifat</strong></td>
+                                            <td>Juda kam</td>
+                                            <td>USA, Germaniya davlatlari</td>
+                                        </tr>
+                                        <tr class="table-success">
+                                            <td><span class="badge bg-info px-3 py-2">AA - A</span></td>
+                                            <td><strong>Yuqori Sifat</strong></td>
+                                            <td>Kam</td>
+                                            <td>Ispaniya, katta banklar</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="badge bg-warning px-3 py-2">BBB</span></td>
+                                            <td><strong>O'rtacha Sifat</strong></td>
+                                            <td>O'rtacha</td>
+                                            <td>Odiy korporatsiyalar</td>
+                                        </tr>
+                                        <tr class="table-danger">
+                                            <td><span class="badge bg-danger px-3 py-2">BB - B</span></td>
+                                            <td><strong>Spekulyativ (XAVFLI)</strong></td>
+                                            <td>Yuqori</td>
+                                            <td>"Junk bonds" - xavfli investitsiya</td>
+                                        </tr>
+                                        <tr class="table-dark">
+                                            <td><span class="badge bg-dark px-3 py-2">CCC - D</span></td>
+                                            <td><strong>Juda XAVFLI / Default</strong></td>
+                                            <td>Juda yuqori</td>
+                                            <td>Bankrot bo'lgan yoki bo'lish oldidagi</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="alert alert-info mt-3 mb-0">
+                                <small><i class="fas fa-arrow-down me-2"></i>
+                                <strong>Aytdi:</strong> AAA = Eng baland (XAVFSIZ), D = Eng past (XAVFLI). Pastga tushsa risk ko'tariladi!
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-navigation">
+    <div class="d-flex align-items-center gap-3">
+        <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
+            <i class="fas fa-home me-2"></i> Bosh sahifa
+        </a>
+        <a href="/baholash/1/" class="btn btn-outline-primary">
+            <i class="fas fa-arrow-left me-2"></i> Oldingi
+        </a>
+        <span class="badge bg-dark px-3 py-2">2 / 12</span>
+        <a href="/baholash/3/" class="btn btn-primary">
+            Keyingi <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+    </div>
+</div>
+
+<style>
+.slide-content { max-width: 1200px; margin: 0 auto; }
+.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+</style>
+{% endblock %}
