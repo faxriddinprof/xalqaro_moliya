@@ -59,17 +59,17 @@
                         <div class="card-body">
                             <h5 class="card-title mb-3">
                                 <i class="fas fa-percent text-success me-2"></i>
-                                CNMV Jaripya Stavkasi
+                                Katta Uchlikning Bozor Ulushi
                             </h5>
                             <p class="text-muted small mb-4">
-                                Bahovchilar qayta tekshirilish uchun jaripya stavkasi o'sdi. 
-                                2010 da 7.5%, lekin 2024 da 17.5% bahovchilari tekshirish talab qilinadi.
+                                2009 yilida S&P, Moody's, Fitch uchta agentlik dunyo bozorining 95% ini nazorat qilardi. 
+                                2024 da esa yangi bahovchilar ruxsat berilgani uchun ularning ulushi 78% ga pasaydi.
                             </p>
                             <div style="height: 300px;">
                                 <canvas id="jaripyaChart"></canvas>
                             </div>
                             <p class="text-success small mt-3 mb-0">
-                                <strong>📊 2.3x Ko'paygan!</strong> CNMV qat'iy nazorat qiladi.
+                                <strong>📊 Ulushi 17% ga tushdi!</strong> Monopoliya buzildi.
                             </p>
                         </div>
                     </div>
@@ -199,7 +199,7 @@
                                     <h6 class="text-danger mb-3 fw-bold">❌ Islohatlari Oldin (2009)</h6>
                                     <ul class="list-unstyled small">
                                         <li class="mb-2">🔴 Faqat 3 ta bahovchi</li>
-                                        <li class="mb-2">🔴 7.5% jaripya</li>
+                                        <li class="mb-2">🔴 95% bozor ulushi</li>
                                         <li class="mb-2">🔴 75% xatolar</li>
                                         <li class="mb-0">🔴 Investorlar qo'rquv</li>
                                     </ul>
@@ -217,7 +217,7 @@
                                     <h6 class="text-success mb-3 fw-bold">✅ Bugun (2024)</h6>
                                     <ul class="list-unstyled small">
                                         <li class="mb-2">🟢 6 ta bahovchi</li>
-                                        <li class="mb-2">🟢 17.5% jaripya</li>
+                                        <li class="mb-2">🟢 78% bozor ulushi</li>
                                         <li class="mb-2">🟢 20% xatolar</li>
                                         <li class="mb-0">🟢 Ishonch orttirdi</li>
                                     </ul>
@@ -321,16 +321,16 @@
             });
         }
 
-        // 2. Jaripya Stavkasi Chart - Horizontal Bar
+        // 2. Bozor Ulushi Chart - Horizontal Bar
         const jaripyaCtx = document.getElementById('jaripyaChart');
         if (jaripyaCtx) {
             new Chart(jaripyaCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['2010', '2024'],
+                    labels: ['2009', '2024'],
                     datasets: [{
-                        label: 'Jaripya Stavkasi (%)',
-                        data: [7.5, 17.5],
+                        label: 'Katta Uchlikning Bozor Ulushi (%)',
+                        data: [95, 78],
                         backgroundColor: [
                             'rgba(255, 152, 0, 0.85)',
                             'rgba(76, 175, 80, 0.85)'
@@ -350,7 +350,7 @@
                     scales: {
                         x: {
                             beginAtZero: true,
-                            max: 25,
+                            max: 100,
                             ticks: {
                                 callback: function(v) {
                                     return v + '%';
