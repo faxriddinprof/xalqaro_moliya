@@ -9,8 +9,8 @@
         <div class="slide-content">
             <div class="text-center mb-5">
                 <span class="badge bg-primary mb-3 px-4 py-2">Slayd 11 / 12</span>
-                <h1 class="display-4 mb-3 fw-bold gradient-text">Statistika va Ma'lumotlar</h1>
-                <p class="lead text-muted">Raqamlar orqali islohatlari tahlil</p>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Islohatlari Natijalari: Statistika va Ma'lumotlar</h1>
+                <p class="lead text-muted">2009-2024 yillarida EU qoidalari bilan kiritilgan islohatlari raqamlar orqali ko'rishimiz</p>
             </div>
 
             <hr class="my-4">
@@ -20,11 +20,12 @@
                 <div class="col-lg-12">
                     <div class="alert alert-info border-0 shadow-sm">
                         <h5 class="alert-heading mb-2">
-                            <i class="fas fa-chart-bar me-2"></i>2009-2024 yillar ichida o'zgarishlar
+                            <i class="fas fa-chart-bar me-2"></i>Nima uchun bu ma'lumotlar muhim?
                         </h5>
                         <p class="mb-0">
-                            EU qoidalari kiritilgandan so'ng, baholash tizimi dramatik o'zgarishi bo'ldi. 
-                            Quyidagi diogrammalar asosiy o'zgarishlari ko'rsatadi.
+                            2008-2009 yillarida global moliyaviy inqirozi bo'lib, ko'p investorlar moliyaviy qiyrachiliklari yo'qot bo'ldi. 
+                            Sababi: rating agentliklari xato reytinglar bergan edi. Shuning uchun EU yangi qoidalarni qabul qildi. 
+                            Quyidagi diogrammalar bu qoidalarning naqadar samarali ekanligini ko'rsatadi.
                         </p>
                     </div>
                 </div>
@@ -37,11 +38,13 @@
                         <div class="card-body">
                             <h5 class="card-title mb-2">
                                 <i class="fas fa-chart-line text-primary me-2"></i>
-                                Bahovchilar Soni
+                                1️⃣ Bahovchilar Soni Qanday O'zgarganlar?
                             </h5>
                             <p class="text-muted small mb-3">
-                                2009 yilida faqat 3 ta asosiy bahovchi bor edi (S&P, Moody's, Fitch). 
-                                2024 da yangi bahovchilar ruxsat berildi.
+                                <strong>2009 yilida:</strong> Dunyoda faqat 3 ta asosiy rating agentligi bor edi - S&P, Moody's va Fitch. 
+                                Bu demak, raqobat yo'q, investorlar har birini ishonib ketishi kerak edi. 
+                                <strong>2024 yilida:</strong> Yangi bahovchilar ruxsat berildi va endi 6 ta katta bahovchi mavjud. 
+                                Bu raqobat ortirdi, xizmat sifati yaxshilandi.
                             </p>
                             <div style="height: 250px;">
                                 <canvas id="bahovchilarChart"></canvas>
@@ -55,11 +58,13 @@
                         <div class="card-body">
                             <h5 class="card-title mb-2">
                                 <i class="fas fa-percent text-success me-2"></i>
-                                Katta Uchlikning Bozor Ulushi
+                                2️⃣ "Katta Uchlikning" Bozor Ulushi Qanday Pasaydi?
                             </h5>
                             <p class="text-muted small mb-3">
-                                S&P, Moody's, Fitch uchta agentlikning dunyo bozorida nazorat qilish ulushi 
-                                2009 yilida 95% dan 2024 yilida 78% ga tushdi.
+                                <strong>2009 yilida:</strong> S&P, Moody's, Fitch uchta kompaniya dunyo bozorining 95% ini nazorat qilardi. 
+                                Bu juda xavfli - agar bu uchta bror xato qilsa, butun dunyo zarrar ko'radi. 
+                                <strong>2024 yilida:</strong> Yangi bahovchilar ruxsat berilgani uchun ularning ulushi 78% ga pasaydi. 
+                                Demak, bozor ko'proq diversifikatsiya bo'ldi, xavf azaldi.
                             </p>
                             <div style="height: 250px;">
                                 <canvas id="jaripyaChart"></canvas>
@@ -76,11 +81,13 @@
                         <div class="card-body">
                             <h5 class="card-title mb-2">
                                 <i class="fas fa-euro-sign text-warning me-2"></i>
-                                EU Jarimalari (Million €)
+                                3️⃣ Jarimalari Nima Uchun Ko'paydi?
                             </h5>
                             <p class="text-muted small mb-3">
-                                Qoidalarga amal qilmaganlar uchun jarimalari keskin ko'paydi. 
-                                2010 yilida €5M bo'lsa, 2024 da €55M ga oshdi.
+                                <strong>2010 yilida:</strong> Qoidalarga amal qilmagan agentlikka faqat €5 million jarima berildi. 
+                                Juda kichik - bu agentliklarga qo'rquv emas edi. 
+                                <strong>2024 yilida:</strong> Endi jarima €55 million ga oshdi (11 marta ko'paydi). 
+                                Bu demak: qoidalarga amal qilish to'g'ri emas, keskin jaza mavjud.
                             </p>
                             <div style="height: 250px;">
                                 <canvas id="jarimalerChart"></canvas>
@@ -94,11 +101,13 @@
                         <div class="card-body">
                             <h5 class="card-title mb-2">
                                 <i class="fas fa-chart-pie text-info me-2"></i>
-                                Rating Xatolar (%)
+                                4️⃣ Rating Xatolar Nima Uchun Azaldi?
                             </h5>
                             <p class="text-muted small mb-3">
-                                2012 yilida 75% jarayonlarda reytingli xatolar bor edi. 
-                                2024 da esa 20% ga tushdi.
+                                <strong>2012 yilida:</strong> 75% jarayonlarda rating xatolar bor edi. 
+                                Bu demak: to'rt jarayondan uchida notog'ri reyting berilgan, investorlar aldanadi. 
+                                <strong>2024 yilida:</strong> Xatolar 20% ga tushdi (3.75 marta azaldi). 
+                                Nima sababi? Yangi qoidalar, qat'iy nazorat, sertifikatsiya talabi - hamasi xatolarni kamayti.
                             </p>
                             <div style="height: 250px;">
                                 <canvas id="xatolerChart"></canvas>
@@ -115,42 +124,46 @@
                         <div class="card-body">
                             <h5 class="card-title mb-3">
                                 <i class="fas fa-table text-primary me-2"></i>
-                                Xulosa: Asosiy O'zgarishlar
+                                Qisqacha Xulosa: Asosiy O'zgarishlar (Oldin va Keyin)
                             </h5>
+                            <p class="text-muted small mb-3">
+                                Quyidagi jadval islohatlari oldin (2009-2012) va keyin (2024) holatlarini taqqoslab ko'rsatadi. 
+                                Qizil rangda kisi - muammolar bor edi. Yashil rangda - muammolar hal qilindi.
+                            </p>
                             <div class="table-responsive">
                                 <table class="table table-hover align-middle">
                                     <thead class="table-light">
                                         <tr>
-                                            <th style="width: 30%;">Ko'rsatkich</th>
-                                            <th style="width: 20%;">Oldin (2009-2010)</th>
+                                            <th style="width: 25%;">Ko'rsatkich</th>
+                                            <th style="width: 20%;">Oldin (2009-2012)</th>
                                             <th style="width: 20%;">Keyin (2024)</th>
-                                            <th style="width: 30%;">O'zgarish</th>
+                                            <th style="width: 35%;">Nima O'zgarganlar?</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td><strong>Bahovchilar Soni</strong></td>
-                                            <td><span class="badge bg-danger">3 ta</span></td>
-                                            <td><span class="badge bg-success">6 ta</span></td>
-                                            <td><span class="text-success fw-bold">+100% ↑</span></td>
+                                            <td><span class="badge bg-danger">3 ta (monopoliya)</span></td>
+                                            <td><span class="badge bg-success">6 ta (raqobat)</span></td>
+                                            <td>+100% ↑ - Monopoliya buzildi, raqobat ortdi</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Bozor Ulushi (Big 3)</strong></td>
-                                            <td><span class="badge bg-danger">95%</span></td>
-                                            <td><span class="badge bg-success">78%</span></td>
-                                            <td><span class="text-success fw-bold">-17% ↓</span></td>
+                                            <td><span class="badge bg-danger">95% (xavf)</span></td>
+                                            <td><span class="badge bg-success">78% (xavf azaldi)</span></td>
+                                            <td>-17% ↓ - Bozor diversifikatsiyasi</td>
                                         </tr>
                                         <tr>
-                                            <td><strong>Yillik Jarimalari</strong></td>
-                                            <td><span class="badge bg-danger">€5M</span></td>
-                                            <td><span class="badge bg-success">€55M</span></td>
-                                            <td><span class="text-success fw-bold">+11x ↑</span></td>
+                                            <td><strong>Jarimalari</strong></td>
+                                            <td><span class="badge bg-danger">€5M (juda kichik)</span></td>
+                                            <td><span class="badge bg-success">€55M (juda katta)</span></td>
+                                            <td>+11x ↑ - Qoidalarga amal majbur</td>
                                         </tr>
                                         <tr>
                                             <td><strong>Rating Xatolar</strong></td>
-                                            <td><span class="badge bg-danger">75%</span></td>
-                                            <td><span class="badge bg-success">20%</span></td>
-                                            <td><span class="text-success fw-bold">-3.75x ↓</span></td>
+                                            <td><span class="badge bg-danger">75% (investorlar aldanadi)</span></td>
+                                            <td><span class="badge bg-success">20% (ishonch ortdi)</span></td>
+                                            <td>-3.75x ↓ - Reyting sifati yaxshilandi</td>
                                         </tr>
                                     </tbody>
                                 </table>
