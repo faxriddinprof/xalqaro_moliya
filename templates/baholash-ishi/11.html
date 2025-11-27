@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Slayd 11 - Taklif Qilingan Yechimlar{% endblock %}
+{% block title %}Slayd 11 - Taklif Qilingan Yechimlar va Statistika{% endblock %}
 
 {% block content %}
 <div class="slide-container">
@@ -9,100 +9,173 @@
         <div class="slide-content">
             <div class="text-center mb-5">
                 <span class="badge bg-primary mb-3 px-4 py-2">Slayd 11 / 12</span>
-                <h1 class="display-4 mb-3 fw-bold gradient-text">Shuning Uchun Nima Qilish Kerak?</h1>
-                <p class="lead text-muted">Yechim va islohatlari</p>
+                <h1 class="display-4 mb-3 fw-bold gradient-text">Yechimlar: Raqamlar Bilan</h1>
+                <p class="lead text-muted">Statistika va ma'lumotlar orqali tahlil</p>
             </div>
 
             <hr class="my-4">
 
+            <!-- Alert Section -->
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <div class="alert alert-success border-0 shadow-sm">
                         <h5 class="alert-heading mb-2">
-                            <i class="fas fa-lightbulb me-2"></i>Yaxshi Xabar
+                            <i class="fas fa-chart-bar me-2"></i>Muhim Ma'lumotlar
                         </h5>
                         <p class="mb-0">
-                            <strong>Dunyoning maliyaviy hamjamiyati muammolarniya'ni biladi va 
-                            ularni xal qilmoqda!</strong> Ispaniya va EU o'z rol oynaydi. 
-                            Keling, yechimlarni ko'ramiz!
+                            <strong>2009-2024 yillar ichida:</strong> EU qoidalari kiritilgandan so'ng, 
+                            baholash tizimi dramatik o'zgarishi bo'ldi. Raqamlar ayniqsa oxirgi 15 yilni 
+                            qanday taraqqiy qilganini ko'rsatadi. Keling, statistikani tahlil qilamiz!
                         </p>
                     </div>
                 </div>
             </div>
 
+            <!-- Charts Row 1 -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-chart-line text-primary me-2"></i>
+                                Dunyo Bahovchilar Soni
+                            </h5>
+                            <p class="text-muted small mb-4">
+                                2009 yilida faqat 3 ta asosiy bahovchi bor edi (S&P, Moody's, Fitch). 
+                                Lekin raqobat yo'q edi. 2024 da yangi bahovchilar ruxsat berildi.
+                            </p>
+                            <div style="height: 300px;">
+                                <canvas id="bahovchilarChart"></canvas>
+                            </div>
+                            <p class="text-success small mt-3 mb-0">
+                                <strong>📈 100% o'rganish!</strong> Yangi bahovchilar monopoliyani buzdi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-percent text-success me-2"></i>
+                                CNMV Jaripya Stavkasi
+                            </h5>
+                            <p class="text-muted small mb-4">
+                                Bahovchilar qayta tekshirilish uchun jaripya stavkasi o'sdi. 
+                                2010 da 7.5%, lekin 2024 da 17.5% bahovchilari tekshirish talab qilinadi.
+                            </p>
+                            <div style="height: 300px;">
+                                <canvas id="jaripyaChart"></canvas>
+                            </div>
+                            <p class="text-success small mt-3 mb-0">
+                                <strong>📊 2.3x Ko'paygan!</strong> CNMV qat'iy nazorat qiladi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row 2 -->
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-euro-sign text-warning me-2"></i>
+                                EU Jarimalari (Million €)
+                            </h5>
+                            <p class="text-muted small mb-4">
+                                Qoidalarga amal qilmaganlar uchun jarimalari keskin ko'paydi. 
+                                2010 yilida €5 million bo'lsa, 2024 da €55 million.
+                            </p>
+                            <div style="height: 300px;">
+                                <canvas id="jarimalerChart"></canvas>
+                            </div>
+                            <p class="text-success small mt-3 mb-0">
+                                <strong>⚠️ 11x Ko'paygan!</strong> Qoidalarga amal qilish majbur.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">
+                                <i class="fas fa-chart-pie text-info me-2"></i>
+                                Rating Xatolar Bilan Jarayonlar
+                            </h5>
+                            <p class="text-muted small mb-4">
+                                2012 yilida 75% jarayonlarda reytingli xatolar bor edi. 
+                                Bugun 20% ga tushdi!
+                            </p>
+                            <div style="height: 300px;">
+                                <canvas id="xatolerChart"></canvas>
+                            </div>
+                            <p class="text-success small mt-3 mb-0">
+                                <strong>✅ 3.75x Tushgan!</strong> Islohatlari natijasi!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solutions Section -->
             <div class="row mb-5">
                 <div class="col-lg-12">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
                             <h5 class="card-title mb-4">
-                                <i class="fas fa-hammer text-success me-2"></i>
-                                EU va Ispaniyaning 6 Asosiy Yechimi
+                                <i class="fas fa-list-check text-success me-2"></i>
+                                6 Asosiy Yechim va Qo'llanilish Natijalari
                             </h5>
-                            
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <div class="bg-success bg-opacity-10 p-3 rounded border border-success">
-                                        <h6 class="text-success mb-2">
-                                            <i class="fas fa-check me-2"></i>1. Stringent Supervision
-                                        </h6>
-                                        <p class="small mb-0">
-                                            CNMV har oyda (hali har yilma emas!) Baholovchilarni tekshiradi: 
-                                            "Bu reyting notog'rimi? Bu model xatomi?" deya
+                                    <div class="p-3 bg-light rounded border-start border-success border-4">
+                                        <h6 class="text-success mb-2"><i class="fas fa-check-circle me-1"></i>1. Qat'iy Nazorat</h6>
+                                        <p class="small text-muted mb-0">
+                                            CNMV har yil bahovchilarni tekshiradi. Natija: jaripya 3x ko'paydi.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="bg-success bg-opacity-10 p-3 rounded border border-success">
-                                        <h6 class="text-success mb-2">
-                                            <i class="fas fa-check me-2"></i>2. Conflict of Interest Rules
-                                        </h6>
-                                        <p class="small mb-0">
-                                            Bahovchi kompaniyadan pul olmasa reyting olmaydi. 
-                                            "Agar olsa, majburan aytish kerak" - compliance duty
+                                    <div class="p-3 bg-light rounded border-start border-success border-4">
+                                        <h6 class="text-success mb-2"><i class="fas fa-check-circle me-1"></i>2. Manfa'at Toqnashi Qoidalari</h6>
+                                        <p class="small text-muted mb-0">
+                                            Bahovchi kompaniyaning o'zi ham share holder bo'lolmaydi.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="bg-success bg-opacity-10 p-3 rounded border border-success">
-                                        <h6 class="text-success mb-2">
-                                            <i class="fas fa-check me-2"></i>3. Diversifikatsiya
-                                        </h6>
-                                        <p class="small mb-0">
-                                            Yangi bBaholovchilarga ruxsat berish - "Bu 3 ta 
-                                            monopolist emas, ko'p bo'lsa bozor korta'ladi"
+                                    <div class="p-3 bg-light rounded border-start border-success border-4">
+                                        <h6 class="text-success mb-2"><i class="fas fa-check-circle me-1"></i>3. Yangi Bahovchilar</h6>
+                                        <p class="small text-muted mb-0">
+                                            Monopoliya buzilishi uchun yangi bahovchilar ruxsat berildi.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="bg-success bg-opacity-10 p-3 rounded border border-success">
-                                        <h6 class="text-success mb-2">
-                                            <i class="fas fa-check me-2"></i>4. Transparency Requirements
-                                        </h6>
-                                        <p class="small mb-0">
-                                            "Bahovchi o'z metodologiyani, qa'l aloqalarini, 
-                                            to'liq aytish kerak" - ba'zi bitta sirri yo'q
+                                    <div class="p-3 bg-light rounded border-start border-success border-4">
+                                        <h6 class="text-success mb-2"><i class="fas fa-check-circle me-1"></i>4. Shaffoflik Majburiyati</h6>
+                                        <p class="small text-muted mb-0">
+                                            Bahovchi nima uchun reyting berganini aytib berish kerak.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="bg-success bg-opacity-10 p-3 rounded border border-success">
-                                        <h6 class="text-success mb-2">
-                                            <i class="fas fa-check me-2"></i>5. Investor Protection
-                                        </h6>
-                                        <p class="small mb-0">
-                                            Agar bahovchi noto'g'ri reyting bersa, investor 
-                                            jarima qilishi mumkin - "Menga pul qaytarish kerak"
+                                    <div class="p-3 bg-light rounded border-start border-success border-4">
+                                        <h6 class="text-success mb-2"><i class="fas fa-check-circle me-1"></i>5. Investor Himoyasi</h6>
+                                        <p class="small text-muted mb-0">
+                                            Notog'ri reytingli investor jarima qilishi mumkin.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="bg-success bg-opacity-10 p-3 rounded border border-success">
-                                        <h6 class="text-success mb-2">
-                                            <i class="fas fa-check me-2"></i>6. Training va Certification
-                                        </h6>
-                                        <p class="small mb-0">
-                                            Baholovchilarning analitiklarini sertifikatsi bo'lishi kerak. 
-                                            "Siz 5 yil tajribasi yo'q, reyting bermay bo'lasiz!"
+                                    <div class="p-3 bg-light rounded border-start border-success border-4">
+                                        <h6 class="text-success mb-2"><i class="fas fa-check-circle me-1"></i>6. Xodim Sertifikatsiyasi</h6>
+                                        <p class="small text-muted mb-0">
+                                            Bahovchilar analitiklari sertifikat talab qilinadi.
                                         </p>
                                     </div>
                                 </div>
@@ -112,52 +185,44 @@
                 </div>
             </div>
 
-            <div class="row mb-5">
-                <div class="col-lg-12">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title mb-3">
-                                <i class="fas fa-arrow-trend-up text-success me-2"></i>
-                                Natijasi Nimasi?
-                            </h5>
-                            <div class="row">
-                                <div class="col-md-4 text-center">
-                                    <h6 class="text-muted">Shu Kunlari</h6>
-                                    <p class="small text-danger mb-0">❌ Baholovchilari ishonch yo'q</p>
-                                    <p class="small text-danger">❌ Reytingli notog'ri</p>
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <h6 class="text-success fw-bold">Arrow</h6>
-                                    <p class="small">→ Islohatlari</p>
-                                </div>
-                                <div class="col-md-4 text-center">
-                                    <h6 class="text-muted">Bugun Endi</h6>
-                                    <p class="small text-success mb-0">✅ Ko'proq ishonch</p>
-                                    <p class="small text-success">✅ Reyting xulq</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <!-- Before/After Section -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card border-0 shadow-sm bg-light">
                         <div class="card-body">
-                            <h5 class="card-title mb-3">
+                            <h5 class="card-title mb-4">
                                 <i class="fas fa-star text-warning me-2"></i>
-                                Ispaniya va EU ning Roli
+                                Xulosa: Oldin va Keyin
                             </h5>
-                            <p class="mb-2">
-                                <strong>Ispaniya:</strong> CNMV boshqaruvi ostida, 
-                                Baholovchilarga "o'z topda" qonunlarni tadbiq qiladi
-                            </p>
-                            <p class="mb-0">
-                                <strong>EU:</strong> Hamjamiyat qonunlari chiqaradi, 
-                                27 ta mamlakati bu qonunlarni amalga ashadilar. 
-                                "Uniform standard" - hamma bir xil qoidada
-                            </p>
+                            <div class="row g-3">
+                                <div class="col-md-4 text-center p-3 bg-white rounded border border-danger">
+                                    <h6 class="text-danger mb-3 fw-bold">❌ Islohatlari Oldin (2009)</h6>
+                                    <ul class="list-unstyled small">
+                                        <li class="mb-2">🔴 Faqat 3 ta bahovchi</li>
+                                        <li class="mb-2">🔴 7.5% jaripya</li>
+                                        <li class="mb-2">🔴 75% xatolar</li>
+                                        <li class="mb-0">🔴 Investorlar qo'rquv</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 text-center p-3 bg-white rounded border border-primary">
+                                    <h6 class="text-primary mb-3 fw-bold">🔄 Sodir Bo'lgan</h6>
+                                    <ul class="list-unstyled small">
+                                        <li class="mb-2">📋 EU qoidalari</li>
+                                        <li class="mb-2">📋 CNMV kuchayishi</li>
+                                        <li class="mb-2">📋 Mas'uliyat</li>
+                                        <li class="mb-0">📋 Shaffoflik</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 text-center p-3 bg-white rounded border border-success">
+                                    <h6 class="text-success mb-3 fw-bold">✅ Bugun (2024)</h6>
+                                    <ul class="list-unstyled small">
+                                        <li class="mb-2">🟢 6 ta bahovchi</li>
+                                        <li class="mb-2">🟢 17.5% jaripya</li>
+                                        <li class="mb-2">🟢 20% xatolar</li>
+                                        <li class="mb-0">🟢 Ishonch orttirdi</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -166,6 +231,7 @@
     </div>
 </div>
 
+<!-- Navigation -->
 <div class="slide-navigation">
     <div class="d-flex align-items-center gap-3">
         <a href="{% url 'resume' %}" class="btn btn-outline-secondary">
@@ -182,7 +248,202 @@
 </div>
 
 <style>
-.slide-content { max-width: 1200px; margin: 0 auto; }
-.gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .slide-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    canvas {
+        max-height: 100%;
+        max-width: 100%;
+    }
 </style>
+
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const chartConfig = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top'
+                }
+            }
+        };
+
+        // 1. Bahovchilar Soni Chart - Horizontal Bar
+        const bahovchilarCtx = document.getElementById('bahovchilarChart');
+        if (bahovchilarCtx) {
+            new Chart(bahovchilarCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2009', '2024'],
+                    datasets: [{
+                        label: 'Bahovchilar Soni',
+                        data: [3, 6],
+                        backgroundColor: [
+                            'rgba(255, 193, 7, 0.85)',
+                            'rgba(40, 167, 69, 0.85)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 193, 7, 1)',
+                            'rgba(40, 167, 69, 1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 8,
+                            ticks: {
+                                stepSize: 2
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 2. Jaripya Stavkasi Chart - Horizontal Bar
+        const jaripyaCtx = document.getElementById('jaripyaChart');
+        if (jaripyaCtx) {
+            new Chart(jaripyaCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2010', '2024'],
+                    datasets: [{
+                        label: 'Jaripya Stavkasi (%)',
+                        data: [7.5, 17.5],
+                        backgroundColor: [
+                            'rgba(255, 152, 0, 0.85)',
+                            'rgba(76, 175, 80, 0.85)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 152, 0, 1)',
+                            'rgba(76, 175, 80, 1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 25,
+                            ticks: {
+                                callback: function(v) {
+                                    return v + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 3. Jarimalari Chart - Horizontal Bar
+        const jarimalerCtx = document.getElementById('jarimalerChart');
+        if (jarimalerCtx) {
+            new Chart(jarimalerCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2010', '2024'],
+                    datasets: [{
+                        label: 'Yillik Jarimalari (Million €)',
+                        data: [5, 55],
+                        backgroundColor: [
+                            'rgba(220, 53, 69, 0.85)',
+                            'rgba(180, 30, 45, 0.85)'
+                        ],
+                        borderColor: [
+                            'rgba(220, 53, 69, 1)',
+                            'rgba(180, 30, 45, 1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 65,
+                            ticks: {
+                                callback: function(v) {
+                                    return '€' + v + 'M';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 4. Xatolar Chart - Horizontal Bar Comparison
+        const xatolerCtx = document.getElementById('xatolerChart');
+        if (xatolerCtx) {
+            new Chart(xatolerCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['2012 (Xatolar)', '2024 (Xatolar)'],
+                    datasets: [{
+                        label: 'Xatolari Foizi (%)',
+                        data: [75, 20],
+                        backgroundColor: [
+                            'rgba(220, 53, 69, 0.85)',
+                            'rgba(40, 167, 69, 0.85)'
+                        ],
+                        borderColor: [
+                            'rgba(220, 53, 69, 1)',
+                            'rgba(40, 167, 69, 1)'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 6,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    ...chartConfig,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: {
+                                callback: function(v) {
+                                    return v + '%';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>
+
 {% endblock %}
